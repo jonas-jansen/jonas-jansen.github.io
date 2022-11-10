@@ -25,7 +25,6 @@
         - Thesis&#58; "Renormalization group methods for Stochastic PDEs".
         - Supervisor&#58; Massimiliano Gubinelli.
          
-
 - title: Experience
   type: time_table
   contents:
@@ -73,10 +72,10 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Non-Newtonian Thin-Film Equations
+    - title: Non-Newtonian Thin-Film Flows
       items: 
-	- Modelling.
-	- Existence, uniqueness and stability properties of weak solutions.
-        - Qualitative properties close to contact points.
+        - Modelling.
+        - Existence, uniqueness and stability properties of weak solutions.
+        - Qualitative properties close to the contact point.
     - title: Homogenisation in Perforated Domains
-
+      items:
