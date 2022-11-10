@@ -9,9 +9,9 @@ profile:
   image: me.png
   image_circular: false # crops the image to make it circular
   address: >
-    <p>office 547</p>
+    <p>room number 547</p>
     <p>Sölvegatan 18A</p>
-    <p>Lund, Sweden</p>
+    <p>223 62 Lund, Sweden</p>
 
 news: true  # includes a list of news items
 current-teaching: false # includes a list of the current teaching activities
