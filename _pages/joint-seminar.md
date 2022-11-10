@@ -42,7 +42,7 @@ nav_order: 2
 <b>Organisers:</b> <a href="https://gabrielebruell.wordpress.com">Gabriele Brüll</a> (Lund), Jonas Jansen (Lund), and <a 
 href="https://www.iadm.uni-stuttgart.de/team/Lienstromberg/">Christina Lienstromberg</a> (Stuttgart)
 
-The seminar takes place roughly biweekly, Wednesdays at 11:00 (sharp) via Zoom.
+The seminar takes place roughly biweekly, Wednesdays at 11:00 (sharp) via Zoom. There will be a 45-60 minute talk plus discussion.
 
 To follow the seminar, please contact me via mail.
 
