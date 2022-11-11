@@ -23,9 +23,6 @@ To follow the seminar, please contact me via mail.
 <h5> List of Talks </h5>
 
 
-
-<h5> List of Talks </h5>
-
 <table class="table">
 <tr>
     <th colspan="4">Season 1: Introduction to Thin-Film Equations</th>
