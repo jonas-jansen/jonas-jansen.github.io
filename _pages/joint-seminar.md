@@ -7,33 +7,6 @@ nav: true
 nav_order: 2
 ---
 
-<head>
-<style>
-#customers {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  font-weight: bold;
-}
-.bottom-one {
-     margin-bottom: 1cm;
-  }
-</style>
-</head>
 
 <h2> Asymptotic Models in Fluid Dynamics </h2>
 
@@ -51,33 +24,23 @@ To follow the seminar, please contact me via mail.
 
 
 
-<table id="customers">
-  <tr>
-    <th colspan="3">Season 1: Introduction to Thin-Film Equations</th>
+<h5> List of Talks </h5>
+
+<table class="table">
+<tr>
+    <th colspan="4">Season 1: Introduction to Thin-Film Equations</th>
   </tr>
-  <tr>
-    <td>23/11/2022</td>
-    <td>Espen Xylander (Stuttgart)</td>
-    <td>Modelling of Newtonian thin-film equations with mobility/slip-conditions</td>
-  </tr>
-  <tr>
-    <td>07/12/2022</td>
-    <td>Jonas Jansen (Lund)</td>
-    <td>Short-time existence and standard parabolic theory</td>
-  </tr>
-  <tr>
-    <td>14/12/2022</td>
-    <td>Juri Joussen (Stuttgart)</td>
-    <td>Naive global non-negative weak solutions</td>
-  </tr>
-  <tr>
-    <td>11/01/2023</td>
-    <td>tba</td>
-    <td>Entropy-methods; non-negativity and non-naive regularisation</td>
-  </tr>
-  <tr>
-    <td>25/01/2023</td>
-    <td>tba</td>
-    <td>Overview: non-newtonian thin-film, finite speed of propagation, waiting-time phenomenon, rheology, no-slip paradox, . . . </td>
-  </tr>
+{% assign talks = site.data.season1 | sort:"date"  %}
+{% for talk in talks %}
+<a class="table"><tr>
+   <td width="1"> {{ talk.date | date: "%d/%m/%Y" }} </td>
+   <td width="150"> {{ talk.speaker }} </td>
+   <td> {{ talk.title }} </td>
+   <td width="1">
+   {% if talk.pdf %}
+            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
+        {% endif %}
+  </td>
+ </tr></a>
+{% endfor %}
 </table>
