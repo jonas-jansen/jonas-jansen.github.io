@@ -38,6 +38,15 @@ To follow the seminar, please contact me via mail.
             <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
         {% endif %}
   </td>
- </tr></a>
+ </tr>
+ {%- if talk.abstract -%}
+ <tr>
+ <td></td>
+ <td colspan="2">
+ <b> Abstract:</b> {{ talk.abstract }}
+ </td>
+ </tr>
+ {%- endif -%}
+ </a>
 {% endfor %}
 </table>
