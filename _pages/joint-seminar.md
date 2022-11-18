@@ -40,7 +40,7 @@ To follow the seminar, please contact me via mail.
   </td>
  </tr>
  {%- if talk.abstract -%}
- <tr>
+ <tr style = "border-top:none">
  <td></td>
  <td colspan="2">
  <b> Abstract:</b> {{ talk.abstract }}
