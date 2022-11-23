@@ -4,7 +4,6 @@
   pdf: Season01-Talk01.pdf
   abstract: |
     The talk is structured into two parts: First, we introduce the initial topic of our seminar by looking at examples of thin films in nature and by briefly showcasing a couple of equations that govern such situations. Afterwards, in the second part, the goal is to derive a specific instance of these thin-film equations. We will discuss the modelling parameters of the underlying Navier-Stokes system before we simplify the problem by assuming the liquid's average height is proportionally small compared to the horizontal length scale. This treatment is part of the so-called lubrication approximation and allows us to reduce the system to a single evolution equation for the fluid height.
-    
     You can find an excerpt from Espen's Master's thesis with a detailed overview of the modelling <a href="/assets/pdf/thin-film-modelling.pdf" target="_blank" rel="noopener noreferrer">here</a>.
 
 - title: Short-time existence and standard parabolic theory
