@@ -33,9 +33,9 @@ To follow the seminar, please contact me via mail.
    <td width="1"> {{ talk.date | date: "%d/%m/%Y" }} </td>
    <td width="150"> {{ talk.speaker }} </td>
    <td> {{ talk.title }} </td>
-   <td width="1">
+   <td width="1" style="vertical-align:center">
    {% if talk.pdf %}
-            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fas fa-file-pdf-xl"></i></a>
+            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf-xl"></i></a>
         {% endif %}
   </td>
  </tr>
