@@ -35,7 +35,7 @@ To follow the seminar, please contact me via mail.
    <td> {{ talk.title }} </td>
    <td width="1">
    {% if talk.pdf %}
-            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fa-solid fa-file-pdf fa-3x"></i></a>
+            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fas fa-file-pdf fa-3x"></i></a>
         {% endif %}
   </td>
  </tr>
