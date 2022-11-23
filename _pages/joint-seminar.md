@@ -50,3 +50,4 @@ To follow the seminar, please contact me via mail.
  </a>
 {% endfor %}
 </table>
+
