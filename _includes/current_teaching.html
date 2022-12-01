@@ -11,11 +11,7 @@
                 {% if item.current -%}
                 <tr>
                   <td>
-                    {% if item.page -%} 
-                      <a class="news-title" href="{{ item.page | relative_url }}">{{ item.title }}</a>
-                    {%- else -%} 
-                      {{ item.title }}
-                    {%- endif %} 
+                    {{ item.title }}
                   </td>
                 </tr>
                 {%- endif %}
