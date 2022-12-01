@@ -1,21 +1,4 @@
+          <h2>current teaching</h2>
+
           
-          <div class="news">
-            <h2>current teaching</h2>
-            <div class="table-responsive">
-              <table class="table table-sm table-borderless">
-              {%- assign events = site.data.teaching -%}
-              {% for item in events %} 
-                <tr>
-                  <td>
-                    {% if item.page -%} 
-                      <a class="news-title" href="{{ item.page }}">{{ item.title }}</a>
-                    {%- else -%} 
-                      {{ item.title }}
-                    {%- endif %} 
-                  </td>
-                </tr>
-              {%- endfor %} 
-              </table>
-            </div>
-          {%- endif %} 
-          </div>
+      

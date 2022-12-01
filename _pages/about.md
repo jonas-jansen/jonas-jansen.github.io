@@ -14,7 +14,7 @@ profile:
     <p>223 62 Lund, Sweden</p>
 
 news: true  # includes a list of news items
-current-teaching: true # includes a list of the current teaching activities
+teaching: true # includes a list of the current teaching activities
 upcoming: true # includes a list of upcoming events
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
