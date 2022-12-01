@@ -1,0 +1,118 @@
+- course: Reading Course
+  title: Resonances in Dynamical Systems
+  term: Spring Term 2023
+  role: Lecturer
+  current: true
+  page: false
+  uni: Lund
+  img:
+
+- course: Matematisk kommunikation
+  title: Project in Math Communication
+  term: Spring Term 2023
+  role: Supervisor
+  current: true
+  page: false
+  uni: Lund
+  img:
+
+- course: Nonlinear PDE II
+  title: Nonlinear PDE II
+  term: Summer Term 2022
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Nonlinear PDE I
+  title: Nonlinear PDE I
+  term: Winter Term 2021
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Undergraduate Seminar
+  title: Fourier Multipliers and Pseudodifferential Operators
+  term: Winter Term 2021
+  role: Organiser (w/ Olli Saari)
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: PDE & Modelling
+  title: PDE & Modelling
+  term: Summer Term 2021
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Graduate Seminar
+  title: Seminar on Fluid Dynamics
+  term: Summer Term 2021
+  role: Organiser (w/ Christina Lienstromberg)
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: PDE and Functional Analysis
+  title: PDE and Functional Analysis
+  term: Winter Term 2020
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Einführung in die Partiellen Differentialgleichungen
+  title: Einführung in die Partiellen Differentialgleichungen
+  term: Summer Term 2020
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Analysis III
+  title: Analysis III
+  term: Winter Term 2020
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: PDE & Modelling
+  title: PDE & Modelling
+  term: Summer Term 2019
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Analysis I
+  title: Analysis I
+  term: Winter Term 2018
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+- course: Einführung in die Partiellen Differentialgleichungen
+  title: Einführung in die Partiellen Differentialgleichungen
+  term: Summer Term 2018
+  role: Teaching Assistant
+  current: false
+  page: false
+  uni: Bonn
+  img:
+
+

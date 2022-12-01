@@ -45,6 +45,11 @@ layout: default
           {%- include news.html %}
           {%- endif %}
 
+          {% if page.current_teaching -%}
+          <!-- News -->
+          {%- include current-teaching.html %}
+          {%- endif %}
+
 	  {%if page.upcoming -%}
 	  <!-- Upcoming evens -->
 	  {%- include upcoming.html%}
