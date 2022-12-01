@@ -10,6 +10,12 @@
   date: 2022-12-07
   speaker: Jonas Jansen (Lund)
   pdf:
+  abstract: |
+    Last time we have derived an equation for the dynamic behaviour of a capillary-driven thin film of the form
+    
+    $$ \partial_t h + \partial_x(h^n \partial_x^3 h) = 0.$$
+
+    This equation is quasilinear degenerate-parabolic and of fourth order. In this talk, we will recall semigroup methods and show how these methods can be applied to obtain local-in-time, smooth, positive solutions.
 
 - title: Naive global non-negative weak solutions
   date: 2022-12-14
