@@ -7,7 +7,7 @@
                 {% if item.current %}
                 <tr>
                   <td>
-                    {% if item.inline -%} 
+                    {% if item.page -%} 
                       <a class="news-title" href="{{ item.page | relative_url }}">{{ item.title }}</a>
                     {%- else -%} 
                       {{ item.title }}
