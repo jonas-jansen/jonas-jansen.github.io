@@ -8,13 +8,13 @@
               <table class="table table-sm table-borderless">
               {%- assign events = site.data.teaching -%}
               {% for item in events %} 
-                {% if item.current -%}
+                {% if item.current %}
                 <tr>
                   <td>
                     {{ item.title }}
                   </td>
                 </tr>
-                {%- endif %}
+                {% endif %}
               {%- endfor %} 
               </table>
             </div>
