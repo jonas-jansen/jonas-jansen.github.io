@@ -15,7 +15,7 @@
     
     $$ \partial_t h + \partial_x(h^n \partial_x^3 h) = 0.$$
 
-    This equation is quasilinear degenerate-parabolic and of fourth order. In this talk, we will recall semigroup methods / standard pararabolic theory and show how these methods can be applied to obtain local-in-time, smooth, positive solutions.
+    This equation is quasilinear degenerate-parabolic and of fourth order. In this talk, we will recall semigroup methods / standard parabolic theory and show how these methods can be applied to obtain local-in-time, smooth, positive solutions.
 
 - title: Naive global non-negative weak solutions
   date: 2022-12-14
