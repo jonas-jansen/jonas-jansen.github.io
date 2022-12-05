@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: teaching
 permalink: /teaching/
 description: My courses.
@@ -8,6 +8,9 @@ nav_order: 2
 display_categories: [current,past]
 horizontal: true
 ---
+<h2> Teaching </h2>
+
+<h5 class = "bottom-one"> My courses. </h5>
 
 <!-- pages/teaching.md -->
 <div class="projects">
