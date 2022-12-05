@@ -416,6 +416,17 @@ footer.sticky-bottom {
 }
 
 
+// Teaching
+
+.teaching{
+  h1 {
+      color: var(--global-theme-color);
+  }
+  h2 {
+      color: var($grey-color-dark);
+  }
+}
+
 // Projects
 
 .projects {
