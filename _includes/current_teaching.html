@@ -4,7 +4,7 @@
               <table class="table table-sm table-borderless">
               {%- assign events = site.data.teaching -%}
               {% for item in events %} 
-                {% if item.current %}
+                {% if item.category == "current" %}
                 <tr>
                   <td>
                     {% if item.page -%} 
