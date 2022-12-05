@@ -1,8 +1,9 @@
 ---
 layout: teaching
-course: Resonances in Dynamical systems
-title: Reading Course
+title: Resonances in Dynamical systems
+type: Reading Course
 term: Spring Term 2023
 notes:
+permalink: 2023_reading-course
 ---
 
