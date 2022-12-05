@@ -35,7 +35,7 @@ horizontal: true
   {%- else -%}
     {% if page.horizontal -%}
   <div class="container">
-    <div class="row">
+    <div class="row row-cols-1">
     {%- for event in teaching_event -%}
       {% include teaching_horizontal_past.html %}
     {%- endfor %}
@@ -50,6 +50,5 @@ horizontal: true
   {%- endif -%}
   {%- endif -%}
   {% endfor %}
-  }
 {%- endif -%}
 </div>

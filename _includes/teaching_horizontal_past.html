@@ -6,7 +6,7 @@
         <div class="col-md-12">
           <div class="card-body">
             <h3 class="card-title">{{ event.title }}</h3>
-            <p class="card-text">{{ event.course }}</p>
+            <p class="card-text">{{ event.role }} ({{ event.term }}) </p>
             <div class="row ml-1 mr-1 p-0">
             </div>
           </div>
@@ -16,15 +16,8 @@
   </a>
   {%- else -%} 
   <div class="card">
-      <div class="row g-0">
-        {%- if event.img -%}
-        <div class="card-img col-md-6">
-          {% include figure.html path=event.img alt=event.caption %}
-        </div>
-        <div class="col-md-6">
-        {%- else -%}
+    <div class="row g-0">
         <div class="col-md-12">
-        {%- endif -%}
           <div class="card-body">
             <h3 class="card-title">{{ event.title }}</h3>
             <p class="card-text">{{ event.role }} ({{ event.term }}) </p>
