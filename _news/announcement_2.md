@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Course Announcement
-date: 2022-12-05 12:00:00-0400
+date: 2022-12-05 12:00:00
 inline: false
 ---
 
