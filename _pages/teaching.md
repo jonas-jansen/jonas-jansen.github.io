@@ -16,6 +16,7 @@ horizontal: true
   {%- for category in page.display_categories %}
   <h2 class="category">{{ category }} teaching</h2>
   {%- assign teaching_event = site.data.teaching | where: "category", category -%}
+  {% if category == "current" -%}
   {% if page.horizontal -%}
   <div class="container">
     <div class="row row-cols-2">
@@ -31,6 +32,24 @@ horizontal: true
     {%- endfor %}
   </div>
   {%- endif -%}
+  {%- else -%}
+    {% if page.horizontal -%}
+  <div class="container">
+    <div class="row">
+    {%- for event in teaching_event -%}
+      {% include teaching_horizontal_past.html %}
+    {%- endfor %}
+    </div>
+  </div>
+  {%- else -%}
+  <div class="grid">
+    {%- for event in teaching_event -%}
+      {% include teaching_horizontal_past.html %}
+    {%- endfor %}
+  </div>
+  {%- endif -%}
+  {%- endif -%}
   {% endfor %}
+  }
 {%- endif -%}
 </div>
