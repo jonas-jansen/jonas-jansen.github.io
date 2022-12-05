@@ -17,7 +17,9 @@ horizontal: true
   {%- for category in page.display_categories %}
   <h2 class="category">{{ category }} teaching</h2>
   {%- assign teaching_event = site.data.teaching | where: "category", category -%}
-  <!-- Generate cards for each project -->
+  {%- for event in teaching_event -%}
+      <p> {{ event.title }} </p>
+  {%- endfor %}  <!-- Generate cards for each project -->
   {% if page.horizontal -%}
   <h1> Debug 2 </h1>
   <div class="container">
