@@ -4,13 +4,14 @@ title: teaching
 permalink: /teaching/
 description: My courses.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [current,past]
 horizontal: true
 ---
 
 <!-- pages/teaching.md -->
 <div class="projects">
+<p> {{ site.enable_teaching_categories}} and {{ page.display_categories }} </p>
 {%- if site.enable_teaching_categories and page.display_categories %}
   <h1> Debug </h1>
   <!-- Display categorized projects -->
