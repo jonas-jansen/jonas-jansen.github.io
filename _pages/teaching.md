@@ -11,8 +11,7 @@ horizontal: true
 
 <!-- pages/teaching.md -->
 <div class="projects">
-<p> {{ site.enable_teaching_categories}} and {{ page.display_categories }} </p>
-{%- if site.enable_teaching_categories and page.display_categories %}
+{%- if page.display_categories %}
   <h1> Debug </h1>
   <!-- Display categorized projects -->
   {%- for category in page.display_categories %}
