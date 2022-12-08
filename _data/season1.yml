@@ -21,12 +21,12 @@
   date: 2022-12-14
   speaker: Juri Joussen (Stuttgart)
   pdf:
-  abstract: |
+  abstract: >
     One of the main difficulties in the study of thin-film equations is their degeneracy: As the solution approaches zero, the parabolicity of the problem breaks down. To overcome this issue, we consider the most natural regularisation of the thin-film equation:
     
-    $$ \partial_t h_\epsilon+\partial_x\left(\left(\left\vert h_\epsilon\right\vert^n+\epsilon\right)\partial_x^3 h_\epsilon\right)=0. $$
+    $$ \partial_t h_\epsilon+\partial_x\left(\left(\left\vert h_\varepsilon\right\vert^n+\varepsilon\right)\partial_x^3 h_\varepsilon\right)=0. $$
 
-    We discuss how global classical solutions to to this problem (with regularised initial data) can be found. As $$ \epsilon\to 0 $$, we show that there is a limit $$h_\epsilon\to h$$ that satisfies the thin-film equation in a weak sense.
+    We discuss how global classical solutions to to this problem (with regularised initial data) can be found. As $$ \varepsilon\to 0 $$, we show that there is a limit $$h_\varepsilon\to h$$ that satisfies the thin-film equation in a weak sense.
 
 
 - title: Entropy methods, non-negativity, and non-naive regularisation
