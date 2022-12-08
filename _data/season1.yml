@@ -26,7 +26,7 @@
     
     $$ \partial_t h_\epsilon+\partial_x\left(\left(\left\vert h_\epsilon\right\vert^n+\epsilon\right)\partial_x^3 h_\epsilon\right)=0. $$
 
-    We discuss how global classical solutions to to this problem (with regularised initial data) can be found. As $$\epsilon\to 0$$, we show that there is a limit $$h_\epsilon\to h$$ that satisfies the thin-film equation in a weak sense.
+    We discuss how global classical solutions to to this problem (with regularised initial data) can be found. As $$ \epsilon\to 0 $$, we show that there is a limit $$h_\epsilon\to h$$ that satisfies the thin-film equation in a weak sense.
 
 
 - title: Entropy methods, non-negativity, and non-naive regularisation
