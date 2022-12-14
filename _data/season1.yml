@@ -20,7 +20,7 @@
 - title: Naive global non-negative weak solutions
   date: 2022-12-14
   speaker: Juri Joussen (Stuttgart)
-  pdf:
+  pdf: Season01-Talk03.pdf
   abstract: >
     One of the main difficulties in the study of thin-film equations is their degeneracy: As the solution approaches zero, the parabolicity of the problem breaks down. To overcome this issue, we consider the most natural regularisation of the thin-film equation:
     
