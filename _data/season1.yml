@@ -33,6 +33,11 @@
   date: 2023-01-18
   speaker: Stefano Böhmer (soon Lund)
   pdf:
+  abstract: >
+    Last time, we have established global existence of weak solutions to the thin-film equation which turned out to be Hölder-continuous in space and time. We have removed the degeneracy of the thin-film equation by adding a small parameter to the mobility term \(|h|^n\) and we have employed an energy-dissipation inequality yielding uniform bounds.
+
+    In this talk, we are going to introduce another integral estimate, the so-called entropy-dissipation inequality, allowing us to study non-negativity of weak solutions. Most importantly, weak solutions obtained from this regularisation scheme and emerging from non-negative initial data remain non-negative. If the slippage parameter satisfies \(n>4\), positive initial data yield positive weak solutions. Finally, we are going to introduce a more sophisticated regularisation scheme yielding positive approximate solutions.
+
 
 - title: >
     Travelling-wave solutions for thin-film equations
