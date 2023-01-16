@@ -7,6 +7,10 @@ importance: 1
 category: current
 ---
 
+<h5 style="color: $theme-color;"> News:</h5>
+
+The first lecture will take place this Thursday, January 19, 15-17 in room MH:228.
+
 <h5 style="color: --global-theme-color;"> Abstract:</h5>
 
 At least since the discoveries of Isaac Newton, mathematicians have wondered about the stability of celestial bodies attracted by gravitational forces. While the sun's mass is roughly a thousand times bigger than the mass of the biggest planet Jupiter (which itself has a mass rougly $$10^2$$ to $$10^3$$ orders larger to the other planets), a perturbative approach to the $$n$$-body problem as a system of many solvable two-body problems fails in general. The reason for this are  resonances between the planets when the ratio of orbital periods forms a small fraction. A perturbative approach to the $$n$$-body problem leads to the appearance of small denominators. For this reason, the study of convergence of the corresponding series has been an open problem until the major breakthrough known as KAM theory (after Kolmogorov, Arnold and Moser).
