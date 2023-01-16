@@ -7,7 +7,7 @@ importance: 1
 category: current
 ---
 
-<h5 style="color: $theme-color;"> News:</h5>
+<h5 style="color: var(--global-theme-color);"> News:</h5>
 
 The first lecture will take place this Thursday, January 19, 15-17 in room MH:228.
 
