@@ -43,7 +43,8 @@
     Travelling-wave solutions for thin-film equations
   date: 2023-01-25
   speaker: Gabriele Brüll (Lund)
-  pdf: >
+  pdf:
+  abstract: >
     A traveling-wave solutions for the thin-film equation with general mobility coefficient \(n\) is given by \(h(t,x)=H(x-ct)\), where \(c\in \mathbb{R}\) is the wave speed and the function \(H\) satisfies the ODE
 
     $$cH^\prime = \left(H^nH^{\prime\prime\prime}\right)^\prime $$
