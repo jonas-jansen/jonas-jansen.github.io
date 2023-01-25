@@ -43,7 +43,7 @@
     Travelling-wave solutions for thin-film equations
   date: 2023-01-25
   speaker: Gabriele Brüll (Lund)
-  pdf:
+  pdf: Season01-Talk05.pdf
   abstract: >
     A traveling-wave solutions for the thin-film equation with general mobility coefficient \(n\) is given by \(h(t,x)=H(x-ct)\), where \(c\in \mathbb{R}\) is the wave speed and the function \(H\) satisfies the ODE
 
@@ -55,4 +55,5 @@
     Overview: non-Newtonian thin films, finite speed of propagation, waiting-time phenomena, no-slip paradox, ...
   date: 2023-02-08
   speaker: Christina Lienstromberg (Stuttgart)
+  abstract:
   pdf:
