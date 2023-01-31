@@ -7,12 +7,10 @@
           <div class="card-body">
             <h5 class="card-title">{{ talk.title }}</h5>
             {%- if talk.link -§}
-            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            <p class="card-text"><a href="{{ talk.link }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
             {%- else -%}
-            <p class="card-text"><a href="{{ talk.page }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
             {%- endif -%}
-            <div class="row ml-1 mr-1 p-0">
-            </div>
           </div>
         </div>
       </div>
@@ -25,12 +23,11 @@
           <div class="card-body">
             <h5 class="card-title">{{ talk.title }}</h5>
             {%- if talk.link -§}
-            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            <p class="card-text"><a href="{{ talk.link }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
             {%- else -%}
-            <p class="card-text"><a href="{{ talk.page }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
             {%- endif -%}
-            <div class="row ml-1 mr-1 p-0">
-            </div>
+          
           </div>
         </div>
       </div>
