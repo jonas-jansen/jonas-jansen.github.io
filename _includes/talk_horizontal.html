@@ -10,6 +10,7 @@
             {%- else -%}
             <p class="card-text">NOLINK: {{ talk.seminar }}, {{ talk.place }} </p>
             {%- endif -%}
+            <p class="card-text"> {{ talk.link }} </p>
           </div>
         </div>
       </div>
@@ -20,6 +21,7 @@
         <div class="col-md-12">
           <div class="card-body">
             <h6 class="card-title">{{ talk.title }}</h6>
+            <p class="card-text">NOLINK: {{ talk.seminar }}, {{ talk.place }} </p>
             {%- if talk.link -§}
             <p class="card-text">LINK: <a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.seminar }}</a>, {{ talk.place }} </p>
             {%- else -%}
