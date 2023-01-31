@@ -1,0 +1,39 @@
+<div class="card-item col">
+  {%- if talk.page -%}
+  <a href="{{ talk.page | relative_url }}">
+    <div class="card hoverable">
+      <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">{{ talk.title }}</h5>
+            {%- if talk.link -§}
+            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            {%- else -%}
+            <p class="card-text"><a href="{{ talk.page }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            {%- endif -%}
+            <div class="row ml-1 mr-1 p-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  {%- else -%} 
+  <div class="card">
+    <div class="row g-0">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">{{ talk.title }}</h5>
+            {%- if talk.link -§}
+            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            {%- else -%}
+            <p class="card-text"><a href="{{ talk.page }}">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            {%- endif -%}
+            <div class="row ml-1 mr-1 p-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
