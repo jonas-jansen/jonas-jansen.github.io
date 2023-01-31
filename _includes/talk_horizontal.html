@@ -6,9 +6,9 @@
           <div class="card-body">
             <h6 class="card-title"><a href="{{ talk.page | relative_url }}">{{ talk.title }}</a></h6>
             {%- if talk.link -§}
-            <p class="card-text"><a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            <p class="card-text"> LINK: <a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.seminar }}</a>, {{ talk.place }} </p>
             {%- else -%}
-            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            <p class="card-text">NOLINK: {{ talk.seminar }}, {{ talk.place }} </p>
             {%- endif -%}
           </div>
         </div>
@@ -21,9 +21,9 @@
           <div class="card-body">
             <h6 class="card-title">{{ talk.title }}</h6>
             {%- if talk.link -§}
-            <p class="card-text"><a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.seminar }}</a>, {{ talk.place }} </p>
+            <p class="card-text">LINK: <a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.seminar }}</a>, {{ talk.place }} </p>
             {%- else -%}
-            <p class="card-text">{{ talk.seminar }}, {{ talk.place }} </p>
+            <p class="card-text">NOLINK: {{ talk.seminar }}, {{ talk.place }} </p>
             {%- endif -%}
           </div>
         </div>
