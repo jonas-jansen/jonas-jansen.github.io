@@ -10,7 +10,7 @@ nav_order: 6
 <!-- pages/talks.md -->
 
 <div class="projects">
-{%- for year in page.display_categories %}
+{%- for year in page.years %}
   <h2 class="category">{{ year }}</h2>
   {%- assign talks = site.data.talks | where: "year", year -%}
   <div class="container">
