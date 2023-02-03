@@ -5,25 +5,28 @@ description: Oberseminar Nichtlineare Differentialgleichungen, Universität Stut
 img: 
 ---
 
+*Oberseminar Nichtlineare Differentialgleichungen, Universität Stuttgart 2023*
 ### Introduction
 
+![[assets/talks/thin-films-1d.png]]
+
 We consider a thin liquid film of an
-- incompressible $\operatorname{div} u =0$
+- incompressible \(\operatorname{div} u =0\)
 - viscous
-- non-Newtonian $\mu = \mu(\epsilon)$
+- non-Newtonian \(\mu = \mu(\epsilon)\)
 fluid on a solid bottom such that
 - capillary forces dominate.
-We assume that the free boundary is given by the graph of a function $h=h(t,x)$
+We assume that the free boundary is given by the graph of a function \(h=h(t,x)\)
 
 
 **Assumptions**
 
-- We assume that the aspect ratio $\varepsilon = \frac{H}{L} \ll 1$ is very small. This will allow us to derive a closed equation for the film height $u$ via asymptotic analysis.
-- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in $y$-direction.
+- We assume that the aspect ratio \(\varepsilon = \frac{H}{L} \ll 1\) is very small. This will allow us to derive a closed equation for the film height \(u\) via asymptotic analysis.
+- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in \(y\)-direction.
 
 **Governing equations**
 
-The dynamics of the full problem is given by the Navier-Stokes equations in the moving domain $\Omega(t)$:
+The dynamics of the full problem is given by the Navier-Stokes equations in the moving domain \(\Omega(t)\):
 
 $$\left\{
 \begin{array}{rcl}
@@ -37,19 +40,22 @@ For simplicity we omit gravitational forces by assuming they are much smaller th
 
 **Rheology**
 
-- $T=T(p,\vec{u}) = -p\operatorname{Id} + \mu(|D|^2)D$ is Cauchy stress tensor ($D$ is the symmetric gradient)
-- shear dependent viscosity $\mu$
-	- $\mu\equiv c$ -> Newtonian fluid
-	- $\mu' >0$ -> shear-thickening fluid
-	- $\mu'<0$ -> shear-thinning fluid
+- \(T=T(p,\vec{u}) = -p\operatorname{Id} + \mu(|D|^2)D\) is Cauchy stress tensor (\(D\) is the symmetric gradient)
+- shear dependent viscosity \(\mu\)
+	- \(\mu\equiv c\) -> Newtonian fluid
+	- \(\mu' >0\) -> shear-thickening fluid
+	- \(\mu'<0\) -> shear-thinning fluid
 - we will assume that the viscosity is explicitly given by the Ostwald-deWaele law
-$$ \mu(\epsilon) = \mu_0|\epsilon|^{\frac{1}{\alpha}-1} $$
+	$$ \mu(\epsilon) = \mu_0|\epsilon|^{\frac{1}{\alpha}-1} $$
+	- Newtonian: \(\alpha=1\)
+	- shear-thickening: \(\alpha <1\)
+	- shear-thinning: \(\alpha >1)
 
 **Boundary conditions**
 
-- kinematic boundary condition: $\partial_t h + u_h \partial_x h = u_v$ (particles that are on the boundary remain on the boundary)
-- slip condition at solid bottom (e.g. $\vec{u}=0$)
-- stress-balance condition: $T(p,\vec{u}) \cdot \vec{n} = \gamma \kappa \vec{n}$, where $\gamma$ is the strength of surface tension, $\kappa$ is the curvature and $\vec{n}$ is the unit outer normal to the free boundary
+- kinematic boundary condition: \(\partial_t h + u_h \partial_x h = u_v\) (particles that are on the boundary remain on the boundary)
+- slip condition at solid bottom (e.g. \(\vec{u}=0\))
+- stress-balance condition: \(T(p,\vec{u}) \cdot \vec{n} = \gamma \kappa \vec{n}\), where \(\gamma\) is the strength of surface tension, \(\kappa\) is the curvature and \(\vec{n}\) is the unit outer normal to the free boundary
 Idea: surface tension tries to equilibrate surface area (=length) of the surface
 
 $$E_{surface}[h] = \int_{\Omega} \sqrt{1+|\partial_xh(x)}\, \mathrm{d}x \sim |\Omega| + \int_{\Omega}\tfrac{1}{2} |\partial_x h(x)|^2 \, \mathrm{d}x$$
@@ -77,7 +83,7 @@ Typically, equations have various gradient-flow structures, depending on the cho
 $$\left\{
 \begin{array}{rcll}
  \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h \bigr) & = & 0, & t>0,x\in \Omega\\
- \partial_x h = m(h)\partial_x^3 h & = & 0, & t>0,x\in \partial\Omega\\
+ \partial_x h = m(h)|\partial_x^3 h|^{\alpha-1}\partial_x^3h & = & 0, & t>0,x\in \partial\Omega\\
  h(0,x) & = & h_0(x), & x\in \Omega
 \end{array}
 \right. $$
@@ -99,9 +105,9 @@ $$ \frac{d}{dt} E[h](t) = \int_{\Omega}\partial_{tx} h \partial_x h\, \mathrm{d}
 
 But how does $j$ dissipate energy? We need to choose a dissipation potential. We make the educated guess that $j$ is choosen as the minimiser of the functional
 
-$$ \langle DE[h],-\partial_x j\rangle + \frac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}}\,\mathrm{d} x.$$
+$$ \langle DE[h],-\partial_x j\rangle + \tfrac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}}\,\mathrm{d} x.$$
 Since if $(h,j)$ solve the continuity equation, this implies that (using that $j$ must be a critical point of this equation)
-$$ \frac{|j|^{\frac{\alpha}{\alpha+1}-1}j}{m(h)^{\frac{1}{\alpha}}} = -\partial_x DE[h] = \partial_x^3h,$$
+$$ \frac{|j|^{\frac{\alpha+1}{\alpha}-1}j}{m(h)^{\frac{1}{\alpha}}} = -\partial_x DE[h] = \partial_x^3h,$$
 
 and hence
 $$ j = m(h)|\partial_x^3 h|^{\alpha-1}\partial_x^3h.$$
@@ -180,28 +186,46 @@ $$E^{\sigma}[h^{\sigma}_{\tau,k+1}] + \tau\tfrac{\alpha}{\alpha+1} \int_{\Omega}
 
 But we can do better using a trick due to de Giorgi. By convexity of both terms in the energy, we can improve this inequality to give
 $$E^{\sigma}[h^{\sigma}_{\tau,k+1}] + \tau \int_{\Omega} \frac{|j^{\sigma}_{\tau,k+1}|^{\frac{\alpha+1}{\alpha}}}{m(h^{\sigma}_{\tau,k})^{\frac{1}{\alpha}}} \, \mathrm{d} x = \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k+1},j^{\sigma}_{\tau,k+1}] \leq \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k},0] = E^{\sigma}[h^{\sigma}_{\tau,k}]. $$
-Working with time interpolations of $(u^{\sigma}_{\tau,k})_k$ and $(j^{\sigma}_{\tau,k})_k$. We are now in the position to send $\tau \searrow 0$, since we can obtain the required a-priori estimates from the energy-dissipation inequality.
+Denote by
+$$\begin{split}
+	\hat{h}^{\sigma}(t) & = \text{linear interpolation between } h^{\sigma}_{\tau,k} \text{ and } h^{\sigma}_{\tau,k},\ t\in [\tau k,\tau(k+1)],\\
+	j^{\sigma}(t) & = j^{\sigma}_{\tau,k+1},\ t\in [\tau k,\tau(k+1)].
+\end{split}
+$$
 
-We find a pair $(h^{\sigma},j^{\sigma})$ such that
+ We are now in the position to send $\tau \searrow 0$, since we can obtain the required a-priori estimates from the energy-dissipation inequality.
+
+**Theorem** The limit $\tau \searrow 0$.
+
+Let $h_0\in H^1(\Omega)$ with finite energy $E^{\sigma}[h_0]<+\infty$. Then every accumulation point $(h^{\sigma},j^{\sigma})$ satisfisies
 
 $$ \left\{
 \begin{array}{rcll}
 	\partial_ t h^{\sigma} + \partial_x j^{\sigma} & = & 0, & x\in \Omega \\
 	\partial_x h^{\sigma} = j^{\sigma} & = & 0, & x\in \partial\Omega \\
 	j^{\sigma} & = & m(h^{\sigma})|\partial_x^3 h^{\sigma} - G_{\sigma}''(h^{\sigma})\partial_x h^{\sigma}|^{\alpha-1}(\partial_x^3h^{\sigma}-G''_{\sigma}(h^{\sigma})\partial_x h^{\sigma}), & x\in \Omega\\
+	h^{\sigma}(0,x) & = h_0(x).
 \end{array}
 \right.
 $$
 and 
 $$ E^{\sigma}[h^{\sigma}](t_1) + \frac{\alpha}{\alpha+1}\int_{t_0}^{t_1}\int_{\Omega} \frac{|j^{\sigma}|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}} \,\mathrm{d}x \,\mathrm{d}s + \frac{1}{\alpha+1} \int_{t_0}^{t_1}\int_{\Omega} m(h)|\partial_x^3h^{\sigma}-G''_{\sigma}(h^{\sigma})\partial_x h^{\sigma}|^{\alpha+1}\,\mathrm{d}x \,\mathrm{d}s = E^{\sigma}[h^{\sigma}](t_0). \tag{4} $$
-The energy-dissipation equality holds for positive solutions due to a trick using Young's inequality and the continuity equation.
+Note that every solution actually satisfies the energy-dissipation equality for a.e. $t_1>t_2\geq 0$.
 
 In total, we have constructed positive weak solutions to a modified equation.
 
 ### Results without modification
 
-In a second step, we want to remove the modification $G_{\sigma}$ from the equation. This can again be obtained by using a-priori estimates due to the energy-dissipation identity $(4)$. Then we can send $\sigma\searrow 0$ and obtain non-negative weak solutions to
+In a second step, we want to remove the modification $G_{\sigma}$ from the equation. This can again be obtained by using a-priori estimates due to the energy-dissipation identity $(4)$. Then we can send $\sigma\searrow 0$. This result is summarised in the following theorem.
 
+**Theorem** The limit $\sigma\searrow 0$.
+
+Let $h_0\in H^1(\Omega)$. Then there exists an accumulation point
+$$h\in L_{\infty}\bigl([0,\infty);H^1(\Omega)\bigr)\cap C^{\frac{1}{5\alpha+3},\frac{1}{2}}_{\mathrm{loc}}([0,\infty)\times\bar\Omega)$$
+with
+- $\partial_x^3 h\in L_{\alpha+1,\mathrm{loc}}(\{h>0\})$
+- $\partial_t h \in L_{\alpha+1}\bigl((0,\infty);(W^1_{\alpha+1}(\Omega))'\bigr)$ 
+of $(h^{\sigma})_{\sigma}$ and $h$ is a global non-negative weak solution to
 $$
 \left\{
 \begin{array}{rcll}
@@ -216,6 +240,5 @@ that satisfy and energy-dissipation inequality of the form
 $$ \int_{\Omega}\tfrac{1}{2} |\partial_x h(t,x)|^2 \, \mathrm{d}x + \int_0^{t} \int_{\Omega} m(h) |\partial_x^3 h(s,x)|^{\alpha+1} \, \mathrm{d}x \,\mathrm{d}t \leq \int_{\Omega}\tfrac{1}{2} |\partial_x h_0(x)|^2 \, \mathrm{d}x.$$
 We may lose equality precisely when the solution becomes zero.
 
+In particular, the thin-film equation is a gradient-flow for positive film heights.
 
-
-### Lift-off
