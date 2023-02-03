@@ -42,7 +42,7 @@ For simplicity we omit gravitational forces by assuming they are much smaller th
 
 **Rheology**
 
-- $$T=T(p,\vec{u}) = -p\operatorname{Id} + \mu(|D|^2)D$$ is Cauchy stress tensor ($$D$$ is the symmetric gradient)
+- here: $$T=T(p,\vec{u}) = -p\operatorname{Id} + \mu(|D|^2)D$$ is Cauchy stress tensor ($$D$$ is the symmetric gradient)
 - shear dependent viscosity $$\mu$$
 	- $$\mu\equiv c$$ -> Newtonian fluid
 	- $$\mu' >0$$ -> shear-thickening fluid
