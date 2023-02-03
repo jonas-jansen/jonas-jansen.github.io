@@ -5,13 +5,11 @@ description: Oberseminar Nichtlineare Differentialgleichungen, Universität Stut
 img: 
 ---
 
-*Oberseminar Nichtlineare Differentialgleichungen, Universität Stuttgart 2023*
-
-This is the manuscript of the talk. For the full result see [https://arxiv.org/abs/2301.10300](https://arxiv.org/abs/2301.10300)
+This is the manuscript of a blackboard talk. For the full result see [https://arxiv.org/abs/2301.10300](https://arxiv.org/abs/2301.10300)
 
 ### Introduction
 
-{% include figure.html path="assets/talsk/thin-films-1d.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.html path="assets/talks/thin-films-1d.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 
 
 We consider a thin liquid film of an
