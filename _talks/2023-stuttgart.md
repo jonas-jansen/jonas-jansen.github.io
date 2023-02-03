@@ -131,8 +131,6 @@ For shear-thinning fluids, Ansini and Giacomelli introduced an additional term i
 - $$G_{\sigma}$$ is convex
 - $$G_{\sigma}(s)= 0$$ for $$s\geq 2\sigma$$ and $$G_{\sigma}(s) \geq s^{-2}$$ for $$s\leq \sigma$$
 
-DRAW PICTURE HERE!
-
 Then, we introduce the new energy
 
 $$ E^{\sigma}[h] = \int_{\Omega} \tfrac{1}{2} |\partial_x h|^2 +G_{\sigma}(h) \, \mathrm{d}x.$$
