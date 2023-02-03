@@ -252,10 +252,7 @@ Let $$h_0\in H^1(\Omega)$$. Then there exists an accumulation point
 
 $$h\in L_{\infty}\bigl([0,\infty);H^1(\Omega)\bigr)\cap C^{\frac{1}{5\alpha+3},\frac{1}{2}}_{\mathrm{loc}}([0,\infty)\times\bar\Omega)$$
 
-with
-- $$\partial_x^3 h\in L_{\alpha+1,\mathrm{loc}}(\{h>0\})$$
-- $$\partial_t h \in L_{\alpha+1}\bigl((0,\infty);(W^1_{\alpha+1}(\Omega))'\bigr)$$ 
-of $$(h^{\sigma})_{\sigma}$$ and $$h$$ is a global non-negative weak solution to
+with $$\partial_x^3 h\in L_{\alpha+1,\mathrm{loc}}(\{h>0\})$$ and $$\partial_t h \in L_{\alpha+1}\bigl((0,\infty);(W^1_{\alpha+1}(\Omega))'\bigr)$$ of $$(h^{\sigma})_{\sigma}$$ and $$h$$ is a global non-negative weak solution to
 
 $$
 \left\{
