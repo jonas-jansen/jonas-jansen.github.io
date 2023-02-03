@@ -6,22 +6,26 @@ img:
 ---
 
 *Oberseminar Nichtlineare Differentialgleichungen, Universität Stuttgart 2023*
+
+This is the manuscript of the talk. For the full result see [https://arxiv.org/abs/2301.10300](https://arxiv.org/abs/2301.10300)
+
 ### Introduction
 
-![[assets/talks/thin-films-1d.png]]
+{% include figure.html path="assets/talsk/thin-films-1d.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
 
 We consider a thin liquid film of an
-- incompressible \(\operatorname{div} u =0\)
+- incompressible $$\operatorname{div} u =0$$
 - viscous
-- non-Newtonian \(\mu = \mu(\epsilon)\)
+- non-Newtonian $$\mu = \mu(\epsilon)$$
 fluid on a solid bottom such that
 - capillary forces dominate.
-We assume that the free boundary is given by the graph of a function \(h=h(t,x)\)
+We assume that the free boundary is given by the graph of a function $$h=h(t,x)$$
 
 
 **Assumptions**
 
-- We assume that the aspect ratio \(\varepsilon = \frac{H}{L} \ll 1\) is very small. This will allow us to derive a closed equation for the film height \(u\) via asymptotic analysis.
+- We assume that the aspect ratio $$\varepsilon = \frac{H}{L} \ll 1$$ is very small. This will allow us to derive a closed equation for the film height \(u\) via asymptotic analysis.
 - We assume that the problem is one-dimensional, that is that the fluid is homogenenous in \(y\)-direction.
 
 **Governing equations**
@@ -62,7 +66,7 @@ $$E_{surface}[h] = \int_{\Omega} \sqrt{1+|\partial_xh(x)}\, \mathrm{d}x \sim |\O
 
 **Lubrication approximation**
 
-Asymptotic expansion in aspect ratio $\varepsilon$ and sending $\varepsilon \searrow 0$, we obtain a closed equation for the film height
+Asymptotic expansion in aspect ratio \(\varepsilon\) and sending \(\varepsilon \searrow 0\), we obtain a closed equation for the film height
 
 $$ \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h \bigr) = 0 $$
 
@@ -71,7 +75,7 @@ $$ \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h 
 Gradient flows are evolutionary systems driven by an energy, in the sense that the energy decreases along solutions, as fast as possible.
 Clasically,
 $$ \dot{x} = - \nabla E[x]$$
-and we find that $E$ decreases along solutions
+and we find that \(E\) decreases along solutions
 $$ \frac{d}{dt} E[x(t)] = \dot{x}(t) \nabla E[x(t)] = -|\nabla E[x(t)]|^2$$
 
 What does *as fast as possible* mean? This is what is guaranteed by the dissipation mechanism.
@@ -97,7 +101,7 @@ $$ \left\{\begin{array}{rcll}
 	\partial_x h = j & = & 0, & t>0, x\in\partial\Omega.
 \end{array}\right. $$
 
-We have hence transformed the problem to finding a pair $(h,j)$ with $j=m(h)\partial_x^3h$.
+We have hence transformed the problem to finding a pair \((h,j)\) with \(j=m(h)\partial_x^3h\).
 The capillary effects forces the film to reduce surface energy. This leads to the choice of the energy
 $$ E[h] = \int_{\Omega} \tfrac{1}{2} |\partial_x h|^2 \,\mathrm{d} x.$$
 Then
