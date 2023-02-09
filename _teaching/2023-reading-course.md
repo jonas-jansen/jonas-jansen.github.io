@@ -7,9 +7,10 @@ importance: 1
 category: current
 ---
 
-<h5 style="color: var(--global-theme-color);"> News:</h5>
+<h5 style="color: var(--global-theme-color);"> Course Details:</h5>
 
-The first lecture will take place this Thursday, January 19, 15-17 in room MH:228.
+- Lecture every Thursday, 15-17 in room MH:228.
+- <a href="/assets/pdf/resonances-notes.pdf" target="_blank" rel="noopener noreferrer">Course Notes</a> (updated 9th February 2023)
 
 <h5 style="color: var(--global-theme-color);"> Abstract:</h5>
 
