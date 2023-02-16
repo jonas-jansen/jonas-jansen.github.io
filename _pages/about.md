@@ -18,6 +18,7 @@ teaching: true # includes a list of the current teaching activities
 upcoming: true # includes a list of upcoming events
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+nav_order: 1
 ---
 
 I am a post-doctor in mathematics at Lunds Universitet. I received my Ph.D. in mathematics from Universität Bonn in 2022, supervised 
