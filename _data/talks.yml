@@ -1,8 +1,17 @@
+- title: Guaranteed lift-off in non-Newtonian thin-film equations
+  year: 2023
+  seminar: Joint dispersive/water wave seminar
+  place: NTNU, LU, UiB
+  date: 2023-03-07
+  link: 
+  abstract:
+  page: assets/talks/2023-liftoff.pdf
+
 - title: The gradient-flow structure of non-Newtonian thin-film equations
   year: 2023
   seminar: Oberseminar Nichtlineare Differentialgleichungen
   place: Universität Stuttgart
-  date: 2023-02-30
+  date: 2023-02-03
   link: https://www.iadm.uni-stuttgart.de/lehrstuhl-fuer-analysis-und-modellierung/oberseminar_nichtlineare_differentialgleichungen/
   abstract:
   page: talks/2023-stuttgart
