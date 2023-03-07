@@ -22,6 +22,37 @@ To follow the seminar, please contact me via mail.
 
 <h5> List of Talks </h5>
 
+<table class="table">
+<tr>
+    <th colspan="4">Season 2: Water waves and the KdV equation (tentative schedule)</th>
+  </tr>
+{% assign talks = site.data.season2 | sort:"date"  %}
+{% for talk in talks %}
+<a class="table"><tr>
+   <td width="1"> {{ talk.date | date: "%d/%m/%Y" }} </td>
+   <td width="150"> {{ talk.speaker }} </td>
+   <td> {{ talk.title }} </td>
+   <td width="1">
+   {% if talk.pdf %}
+            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fas fa-file-pdf fa-2x"></i></a>
+        {% endif %}
+  </td>
+ </tr>
+ {%- if talk.abstract -%}
+ <tr style = "border-top-style:none">
+ <td></td>
+ <td colspan="2">
+ <b> Abstract:</b> {{ talk.abstract }}
+ </td>
+ </tr>
+ {%- endif -%}
+ </a>
+{% endfor %}
+</table>
+
+
+<h5> Previous Seasons </h5>
+
 
 <table class="table">
 <tr>
@@ -51,31 +82,5 @@ To follow the seminar, please contact me via mail.
 {% endfor %}
 </table>
 
-<table class="table">
-<tr>
-    <th colspan="4">Season 2: Water waves and the KdV equation (tentative schedule)</th>
-  </tr>
-{% assign talks = site.data.season2 | sort:"date"  %}
-{% for talk in talks %}
-<a class="table"><tr>
-   <td width="1"> {{ talk.date | date: "%d/%m/%Y" }} </td>
-   <td width="150"> {{ talk.speaker }} </td>
-   <td> {{ talk.title }} </td>
-   <td width="1">
-   {% if talk.pdf %}
-            <a href="{{ talk.pdf | prepend: '/assets/slides/' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Slides"><i class="fas fa-file-pdf fa-2x"></i></a>
-        {% endif %}
-  </td>
- </tr>
- {%- if talk.abstract -%}
- <tr style = "border-top-style:none">
- <td></td>
- <td colspan="2">
- <b> Abstract:</b> {{ talk.abstract }}
- </td>
- </tr>
- {%- endif -%}
- </a>
-{% endfor %}
-</table>
+
 
