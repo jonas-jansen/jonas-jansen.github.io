@@ -9,7 +9,7 @@
   date: 2023-03-15
   speaker: Bastian Hilder (Lund)
   pdf: 
-  abstract:
+  abstract: The Korteweg-de Vries (KdV) equation appears as an asymptotic model to describe the dynamics of small, long-wavelength water waves. In this talk, I will formally derive the KdV equation as an amplitude equation for the water wave problem. The derivation is based on a multiple-scaling ansatz for solutions of the water wave problem in Eulerian coordinates.
 
 - title: Travelling-wave solutions for the KdV equation
   date: 2023-03-22
