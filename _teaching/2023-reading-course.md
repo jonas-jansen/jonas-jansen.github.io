@@ -11,7 +11,7 @@ category: current
 
 - Lecture every Thursday, 15-17.
 - Until further notice, the lecture will take place in room 332B.
-- <a href="/assets/pdf/resonances-notes.pdf" target="_blank" rel="noopener noreferrer">Course Notes</a> (updated 9th February 2023)
+- <a href="/assets/pdf/resonances-notes.pdf" target="_blank" rel="noopener noreferrer">Course Notes</a> (updated 17th March 2023)
 
 <h5 style="color: var(--global-theme-color);"> Abstract:</h5>
 
