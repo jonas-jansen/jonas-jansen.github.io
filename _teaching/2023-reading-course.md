@@ -9,9 +9,47 @@ category: current
 
 <h5 style="color: var(--global-theme-color);"> Course Details:</h5>
 
-- Lecture every Thursday, 15-17.
+- Lecture every Thursday, 13-15. Last lecture on Wednesday (!), April 05 15-17.
 - Until further notice, the lecture will take place in room 332B.
 - <a href="/assets/pdf/resonances-notes.pdf" target="_blank" rel="noopener noreferrer">Course Notes</a> (updated 17th March 2023)
+
+<h5 style="color: var(--global-theme-color);"> Seminar:</h5>
+
+The seminar part of this course will follow in may with the following talks.
+
+<table class="table">
+<tr>
+    <th colspan="2">KAM theory for infinite-dimensional Hamiltonian system</th>
+</tr>
+<a class="table">
+<tr>
+   <td width="1"> 11/05/2023 </td>
+   <td> Introduction to the Hamiltonian structure of nonlinear wave equations
+   		Periodic and Quasi-periodic Solutions of Nonlinear Wave Equations via KAM Theory (part I)
+   </td>
+ </tr>
+ <tr>
+   <td width="1"> 17/05/2023 </td>
+   <td> Periodic and Quasi-periodic Solutions of Nonlinear Wave Equations via KAM Theory (parts II and III)
+   </td>
+ </tr>
+ <tr>
+   <td width="1"> 18/05/2023 </td>
+   <td> KAM Tori for 1D Nonlinear Wave Equations with Periodic Boundary Conditions (parts I and II)
+   </td>
+ </tr>
+ <tr>
+   <td width="1"> 24/05/2023 </td>
+   <td> Introduction to the KdV equation and its complete integrability
+   </td>
+ </tr>
+ <tr>
+   <td width="1"> 25/05/2023 </td>
+   <td> A KAM-Theorem for Equations of the Korteweg-de Vries Type (parts I and II)
+   </td>
+ </tr>
+ </a>
+</table>
 
 <h5 style="color: var(--global-theme-color);"> Abstract:</h5>
 
@@ -20,6 +58,7 @@ At least since the discoveries of Isaac Newton, mathematicians have wondered abo
 KAM theory provides stability of the corresponding invariant tori for certain perturbations if the resonances can be controlled. This course will be a gentle introduction into the problem of small divisors and its resolution. We study KAM theory first phenomenologically for simple dynamical systems such as perturbations of rotations of the circle or twist maps. Then, we continue with finite-dimensional integrable Hamiltonian systems.
 
 More modern advances of KAM theory include the application to infinite-dimensional dynamics. We will discuss problems coming from the theory of water waves or quantum mechanics.
+
 
 <h5 style="color: var(--global-theme-color);"> Course Structure:</h5>
 
