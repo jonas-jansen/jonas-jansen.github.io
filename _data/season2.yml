@@ -23,19 +23,19 @@
     This talk is structured into two parts. First we will derive an explicit formula of a solitary-wave solution for the KdV equation, which is given by \(A(x,t) = v(x-ct)\), where \(c \in \mathbb{R}\) is the wave speed and v satisfies the ODE \(-cv' + v''' - 6vv' = 0\) for \(\mu = -1\) and \(\nu = 6\). In the second part we will discuss shortly the idea to show existence of solitary waves by variational methods.
 
 - title: Stability of solitary waves for the KdV equation
-  date: 2023-04-19
+  date: 2023-04-17
   speaker: Jörg Weber (Lund)
   pdf: 
   abstract:
 
 - title: Validity of KdV equation
-  date: 2023-04-26
+  date: 2023-04-24
   speaker: Wolf-Patrick Düll (Stuttgart)
   pdf: 
   abstract:
 
 - title: Soliton solutions for fKdV (tentative title)
-  date: 2023-05-01
+  date: 2023-05-02
   speaker: Arnaud Eychenne (University of Bergen)
   pdf: 
   abstract:
