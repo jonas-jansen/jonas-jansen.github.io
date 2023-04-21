@@ -33,7 +33,7 @@
   date: 2023-04-24
   speaker: Wolf-Patrick Düll (Stuttgart)
   pdf: 
-  abstract:
+  abstract: In this talk, we explain how to jusitify rigorously the KdV approximation of the water wave problem with and without surface tension by proving error estimates over the physically relevant timespan. The error estimates are derived in the arc length formulation of the water wave problem, which yields bounds that are uniform with respect to the strength of the surface tension, as the height of the wave packet and the surface tension go to zero.
 
 - title: Soliton solutions for fKdV (tentative title)
   date: 2023-05-02
