@@ -23,28 +23,28 @@ The seminar part of this course will follow in may with the following talks.
 </tr>
 <a class="table">
 <tr>
-   <td width="1"> 11/05/2023 </td>
+   <td width="1"> 15/05/2023 15-17 </td>
    <td> Introduction to the Hamiltonian structure of nonlinear wave equations
    		Periodic and Quasi-periodic Solutions of Nonlinear Wave Equations via KAM Theory (part I)
    </td>
  </tr>
  <tr>
-   <td width="1"> 17/05/2023 </td>
+   <td width="1"> 17/05/2023 15-17 </td>
    <td> Periodic and Quasi-periodic Solutions of Nonlinear Wave Equations via KAM Theory (parts II and III)
    </td>
  </tr>
  <tr>
-   <td width="1"> 18/05/2023 </td>
+   <td width="1"> 22/05/2023 15-17  </td>
    <td> KAM Tori for 1D Nonlinear Wave Equations with Periodic Boundary Conditions (parts I and II)
    </td>
  </tr>
  <tr>
-   <td width="1"> 24/05/2023 </td>
+   <td width="1"> 24/05/2023 15-17 </td>
    <td> Introduction to the KdV equation and its complete integrability
    </td>
  </tr>
  <tr>
-   <td width="1"> 25/05/2023 </td>
+   <td width="1"> 25/05/2023 13-15 </td>
    <td> A KAM-Theorem for Equations of the Korteweg-de Vries Type (parts I and II)
    </td>
  </tr>

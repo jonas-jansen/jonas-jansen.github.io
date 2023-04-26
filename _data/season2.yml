@@ -29,7 +29,7 @@
   abstract: Having constructed solitary waves for KdV in the last session, the natural question to ask is whether or not they are stable. Here, due to translational invariance of the equation, one has to be careful when speaking about “stability” – the correct notion being orbital stability. In this talk, I show how our situation fits into the classical, seminal theory of Grillakis, Shatah and Strauss, and thus answer the question on stability, while keeping an eye on the great, more widely applicable power of their theory.
 
 
-- title: Validity of KdV equation
+- title: Validity of the KdV equation
   date: 2023-04-24
   speaker: Wolf-Patrick Düll (Stuttgart)
   pdf: 
