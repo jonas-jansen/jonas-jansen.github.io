@@ -35,7 +35,7 @@
   pdf: Season02-Talk05.pdf
   abstract: In this talk, we explain how to jusitify rigorously the KdV approximation of the water wave problem with and without surface tension by proving error estimates over the physically relevant timespan. The error estimates are derived in the arc length formulation of the water wave problem, which yields bounds that are uniform with respect to the strength of the surface tension, as the height of the wave packet and the surface tension go to zero.
 
-- title: Soliton solutions for fKdV (tentative title)
+- title: Existence of N-solitary waves for the fractional Korteweg-de Vries equation
   date: 2023-05-02
   speaker: Arnaud Eychenne (University of Bergen)
   pdf: 
