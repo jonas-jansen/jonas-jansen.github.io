@@ -32,11 +32,14 @@
 - title: Validity of the KdV equation
   date: 2023-04-24
   speaker: Wolf-Patrick Düll (Stuttgart)
-  pdf: 
+  pdf: Season02-Talk05.pdf
   abstract: In this talk, we explain how to jusitify rigorously the KdV approximation of the water wave problem with and without surface tension by proving error estimates over the physically relevant timespan. The error estimates are derived in the arc length formulation of the water wave problem, which yields bounds that are uniform with respect to the strength of the surface tension, as the height of the wave packet and the surface tension go to zero.
 
 - title: Soliton solutions for fKdV (tentative title)
   date: 2023-05-02
   speaker: Arnaud Eychenne (University of Bergen)
   pdf: 
-  abstract:
+  abstract: |
+    The fractional Korteweg-de Vries equation (fKdV) equation is a dispersion generalized of the KdV equation.  As the KdV equation, the fKdV equation enjoys the existence of solitary waves and N-solitary waves. Due to the singularity of the non-local dispersion, the technics involved in proving the existence and derived properties of solitary waves and N-solitary waves are different from the one of the KdV equation (local context). 
+
+    In the first part of the talk, we will give the results known of the solitary waves of the fKdV equation and the differences in the techniques between the local and non-local contexts. In the second part, we will present the existence of the N-solitary waves, with a short explanation of the Martel-Merle method to prove the existence of such objects and the main difficulties due to the non-locality of the dispersive operator.  
