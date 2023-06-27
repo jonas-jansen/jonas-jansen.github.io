@@ -19,6 +19,8 @@ The seminar takes place roughly biweekly, Wednesdays at 11:00 (sharp) via Zoom. 
 
 To follow the seminar, please contact me via mail.
 
+The seminar will resume in October 2023. Have a great summer!
+
 
 <h5> List of Talks </h5>
 
