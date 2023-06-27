@@ -12,8 +12,8 @@ nav_order: 2
 
 <h5 class = "bottom-one"> Joint Research Seminar Lund-Stuttgart </h5>
 
-<b>Organisers:</b> <a href="https://gabrielebruell.wordpress.com">Gabriele Brüll</a> (Lund), Jonas Jansen (Lund), and <a 
-href="https://www.iadm.uni-stuttgart.de/team/Lienstromberg/">Christina Lienstromberg</a> (Stuttgart)
+<b>Organisers:</b> <a href="https://gabrielebruell.wordpress.com">Gabriele Brüll</a>, Jonas Jansen (both Lund), <a 
+href="https://www.iadm.uni-stuttgart.de/team/Lienstromberg/">Christina Lienstromberg</a>, and <a href="https://www.iadm.uni-stuttgart.de/team/Schneider-00003/">Guido Schneider</a> (both Stuttgart)
 
 The seminar takes place roughly biweekly, Wednesdays at 11:00 (sharp) via Zoom. There will be a 45-60 minute talk plus discussion.
 
