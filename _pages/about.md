@@ -21,8 +21,14 @@ social: true  # includes social icons at the bottom of the page
 nav_order: 1
 ---
 
-I am a post-doctor in mathematics at Lunds Universitet. I received my Ph.D. in mathematics from Universität Bonn in 2022, supervised 
-by Juan J. L. Velázquez.
+I am a post-doctor in mathematics at the LTH at Lunds Universitet. I received my Ph.D. in mathematics from Universität Bonn in 2022, supervised by Juan J. L. Velázquez.
 
-My research focuses on the study of PDEs arising from  asymptotic models in fluid dynamics. Mainly, I study thin-film models in 
-various geometries and rheologies. 
+My research focuses on the study of nonlinear PDEs arising from asymptotic models in fluid dynamics describing the dynamical behaviour of free interfaces. Mainly, I am working on thin-film models in various geometries, rheologies and considering different physical effects. My main interests include:
+
+- the modelling of physically relevant situations in various scaling limits
+- the analysis of stationary states and emerging patterns
+- the analysis of stability and instability phenonema and the long-time behaviour of solutions
+- modulating fronts and amplitude equations
+- questions on existence and uniqueness of classical and weak solutions
+
+In more detail, I am currently working on emerging patterns for the thermocapillary Bénard-Marangoni problem. Furthermore, I work on the non-Newtonian classical thin-film equation. In the past, I have also worked on stochastic homogenisation in perforated domains.
