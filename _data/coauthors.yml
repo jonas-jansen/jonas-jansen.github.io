@@ -13,3 +13,7 @@
 "Gladbach":
   - firstname: ["Peter", "P."]
     url: https://www.iam.uni-bonn.de/aaa2/people/peter-gladbach
+
+"Hilder":
+  - firstname: ["Bastian", "B."]
+    url: https://sites.google.com/view/bastian-hilder/
