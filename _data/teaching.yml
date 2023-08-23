@@ -1,8 +1,18 @@
+- course: Lecture
+  title: Endimensionell analys
+  term: Winter Term 2023
+  role: Tutor
+  category: current
+  page: false
+  uni: Lund
+  img:
+  caption:
+
 - course: Reading Course
   title: Resonances in Dynamical Systems
   term: Spring Term 2023
   role: Lecturer
-  category: current
+  category: past
   page: /teaching/2023-reading-course
   uni: Lund
   img:
@@ -12,7 +22,7 @@
   title: Project in Math Communication
   term: Spring Term 2023
   role: Supervisor
-  category: current
+  category: past
   page: false
   uni: Lund
   img:

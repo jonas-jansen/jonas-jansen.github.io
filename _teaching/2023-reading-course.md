@@ -4,7 +4,7 @@ title: Resonances in Dynamical Systems
 description: Reading Course
 img: 
 importance: 1
-category: current
+category: past
 ---
 
 <h5 style="color: var(--global-theme-color);"> Course Details:</h5>
