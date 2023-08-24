@@ -35,6 +35,15 @@
 - title: Teaching Experience
   type: time_table
   contents:
+    - title: Tutor
+      year: 2023
+      description: Endimensionell analysis (B1) (Lund)
+    - title: Lecturer
+      year: 2023
+      title: Ph.D. course: <a href="https://jonas-jansen.github.io/teaching/2023-reading-course/">Resonances in Dynamical Systems</a>
+    - title: Supervisor
+      year: 2023
+      title: Matematisk kommunikation (Lund)
     - title: Teaching Assistant
       year: 2022
       description: Nonlinear PDE II (Bonn).
