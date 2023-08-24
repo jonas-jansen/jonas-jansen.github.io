@@ -81,6 +81,12 @@
 - title: Academic Interests
   type: nested_list
   contents:
+    - title: Pattern-formation and stability in asymptotic fluid models
+      items:
+        - Patterns in models of the Bénard-Marangoni problem
+        - Thin films on inclined planes
+        - Quasilinear center-manifold theory
+        - Local/global bifurcation theory
     - title: Non-Newtonian Thin-Film Flows
       items: 
         - Modelling.
