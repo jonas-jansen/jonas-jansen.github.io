@@ -25,8 +25,8 @@ fluid on a solid **heated** plate such that
 **Assumptions**
 
 - We assume that the free boundary is given by the graph of a function $h=h(t,x)$.
-- We assume that the aspect ratio $\varepsilon = \frac{H}{L} = \frac{\text{characteristic height}}{\text{characteristic length}} \ll 1$ is very small. This will allow us to derive a closed equation for the film height $u$ via asymptotic analysis.
-- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in $y$-direction.
+- We assume that the aspect ratio $$\varepsilon = \frac{H}{L} = \frac{\text{characteristic height}}{\text{characteristic length}} \ll 1$$ is very small. This will allow us to derive a closed equation for the film height $$u$$ via asymptotic analysis.
+- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in $$y$$-direction.
 
 Henri Bénard observed in 1900 that regular polygonal – typically hexagonal – pattern emerge if the temperature difference between the heated solid bottom and the ambient air reaches a critical threshold. Even film-rupture states can emerge experimentally depending on the thickness of the film and the heat conduction of the ambient gas.
 
@@ -40,7 +40,8 @@ temperature, temperature variations lead to (tangential) stress imbalances on th
 
 Mathematically, the problem is known as the *Bénard–Marangoni problem* and is usually modelled by the Boussinesq–Navier–Stokes system. This is a coupled system of the Navier–Stokes equations with a transport-diffusion equation for the temperature under the assumption that density variations due to buoyancy are negligible.
 
-In the bulk region $\{(t,x,z) \in \mathbb{R}_+ \times \mathbb{R}^2 : 0 < z < h(t,x) \}$ we have for $u=(u_1,u_2)$:
+In the bulk region $$\{(t,x,z) \in \mathbb{R}_+ \times \mathbb{R}^2 : 0 < z < h(t,x) \}$$ we have for $$u=(u_1,u_2)$$:
+
 $$
 \left\{
     \begin{array}{rcl}
@@ -50,40 +51,48 @@ $$
     \end{array}
     \right.
 $$
-and boundary conditions at the free boundary $z=h(t,x)$:
-- kinematic boundary condition: $\partial_t h + u_1h = u_2$
-- stress-balance condition: $\Sigma(p,u)n = \sigma \kappa n - (\partial_x T) \tau$ (here, $n$ is the outer unit normal, $\tau$ the tangential component, $\sigma$ the surface tension, $\kappa$ the curvature, and $\Sigma(p,u) = - p\mathrm{Id} + \frac{1}{2} (Du+Du^T)$ is the Cauchy stress tensor)
-- heat transfer condition: $k\nabla T n = -k(T-T_g)$ (k is the heat conductivity of the fluid, $K$ the heat exchange coefficient)
 
-and at the fluid-solid interface $z=0$:
-- slip condition: $u = 0$
-- heat transfer condition: $T = T_s$
+and boundary conditions at the free boundary $$z=h(t,x)$$:
+- kinematic boundary condition: $$\partial_t h + u_1h = u_2$$
+- stress-balance condition: $$\Sigma(p,u)n = \sigma \kappa n - (\partial_x T) \tau$$ (here, $$n$$ is the outer unit normal, $$\tau$$ the tangential component, $$\sigma$$ the surface tension, $$\kappa$$ the curvature, and $$\Sigma(p,u) = - p\mathrm{Id} + \frac{1}{2} (Du+Du^T)$$ is the Cauchy stress tensor)
+- heat transfer condition: $$k\nabla T n = -k(T-T_g)$$ ($$k$$ is the heat conductivity of the fluid, $$K$$ the heat exchange coefficient)
+
+and at the fluid-solid interface $$z=0$$:
+- slip condition: $$u = 0$$
+- heat transfer condition: $$T = T_s$$
 
 **Lubrication approximation**
 
-Rescaling the system by replacing $x$ with $\eps x$ and $t$ with $\eps^2 t$, we can obtain an asymptotic expansion in the aspect ratio $\varepsilon$. By sending $\varepsilon \searrow 0$, we obtain a closed equation for the film height
+Rescaling the system by replacing $$x$$ with $$\varepsilon x$$ and $$t$$ with $$\varepsilon^2 t$$, we can obtain an asymptotic expansion in the aspect ratio $$\varepsilon$$. By sending $$\varepsilon \searrow 0$$, we obtain a closed equation for the film height
+
 $$\partial_t h + \partial_x \Bigl(h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0,\quad t>0,\ x\in \R \tag{1}$$<a id="tfe"></a>
-where $g>0$ is a gravitational constant and $M>0$ is the Marangoni number, which is proportional to the difference of the temperatures of the solid and the ambient gas.
+
+where $$g>0$$ is a gravitational constant and $$M>0$$ is the Marangoni number, which is proportional to the difference of the temperatures of the solid and the ambient gas.
 
 ##### Linear stability analysis
 
-Since every constant height is a solution to equation [(1)](#tfe), we may choose our favourite height $\bar{h}=1$. Linearising about $\bar{h}$ gives the equation
+Since every constant height is a solution to equation [(1)](#tfe), we may choose our favourite height $$\bar{h}=1$$. Linearising about $$\bar{h}$$ gives the equation
+
 $$\partial_t w = \mathcal{L}w$$
+
 with linear operator
+
 $$ \mathcal{L}w = -\partial_x^4 w + \bigl(g - \tfrac{M}{4}\bigr)\partial_x^2 w.$$
-Plugging in the ansatz $w=\exp(\lambda t - ikx)$, we obtain the dispersion relation
-$$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2 $$
+
+Plugging in the ansatz $$w=\exp(\lambda t - ikx)$$, we obtain the dispersion relation
+
+$$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2$$
 
 {% include figure.html path="assets/talks/long-wave.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-At $M=M^* = 4g$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $M>M^*$, that waves with wave number $|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $k_0$ at $M=M^* +4k_0^2$. This discretises the spectrum and only waves with wave number $k_0$ destabilise.
+At $$M=M^* = 4g$$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $$M>M^*$$, that waves with wave number $$|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $$k_0$$ at $$M=M^* +4k_0^2$$. This discretises the spectrum and only waves with wave number $$k_0$$ destabilise.
 
 ##### Goals
 
 {% include figure.html path="assets/talks/bifurcation-diagram.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
 We will show
-- the existence of a local bifurcation branch at $M(k_0) = M^* + 4k_0^2$ consisting of $\frac{2\pi}{k_0}$-periodic even stationary solutions
+- the existence of a local bifurcation branch at $$M(k_0) = M^* + 4k_0^2$$ consisting of $$\frac{2\pi}{k_0}$$-periodic even stationary solutions
 - that this branch can be extended to a global bifurcation branch whose limit points exhibit film rupture
 - show that limit points are weak even periodic stationary solutions
 
@@ -95,7 +104,8 @@ The main observation for the bifurcation analysis is that the stationary problem
 We study the stationary problem
 
 $$ \partial_x \Bigl((h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0$$
-and rewrite this using $h=\bar{h} + v = 1+v$ as
+
+and rewrite this using $$h=\bar{h} + v = 1+v$$ as
 
 $$ \partial_x \Bigl((1+v)^3(\partial_x^3 v - g\partial_x v) + M\frac{(1+v)^2}{(2+v)^2}\partial_xv\Bigr) = 0 $$
 
@@ -103,9 +113,11 @@ can be integrated once using that constant film heights are solutions:
 
 $$(1+v)^3(\partial_x^3 v - g\partial_x v) + M\frac{(1+v)^2}{(2+v)^2}\partial_xv = 0 $$
 
-Dividing by $(1+v)^3$, we may integrate again and obtain the second-order ODE
+Dividing by $$(1+v)^3$$, we may integrate again and obtain the second-order ODE
+
 $$ \partial_x^2 v = gv - M\Bigl(\frac{1}{2+v} + \log\Bigl(\frac{1+v}{2+v}\Bigr) \Bigr) + MK$$
-with constant of integration $K$. The corresponding first-order system is a Hamiltonian system given the Hamiltonian
+
+with constant of integration $$K$$. The corresponding first-order system is a Hamiltonian system given the Hamiltonian
 
 $$ \mathcal{H}(v,w) = \frac{1}{2}w^2 - \frac{g}{2} v^2 + M(1+v)\log\Bigl(\frac{1+v}{2+v}\Bigr) - MKv,$$
 where $w= \partial_x v$. 
@@ -159,9 +171,9 @@ We can now apply the Crandall-Rabinowitz theorem to obtain a local bifurcation b
 
 Theorem
 
-Fix $k_0 >0$. Then at $(0,M^*(k_0))$ a subcritical pitchfork bifurcation occurs and there exist $\eps >0$ and a branch of solutions
+Fix $k_0 >0$. Then at $(0,M^*(k_0))$ a subcritical pitchfork bifurcation occurs and there exist $\varepsilon >0$ and a branch of solutions
 $$
-        \{(v(s),M(s)) : s \in (-\eps,\eps)\} \subset \mathcal{U} \times \R
+        \{(v(s),M(s)) : s \in (-\varepsilon,\varepsilon)\} \subset \mathcal{U} \times \mathbb{R}
 $$
 to the bifurcation problem $F(v,M)=0$ with expansions
 $$
@@ -180,21 +192,21 @@ Theorem
 
 Let $k_0>0$ and 
  $$
-\{(v(s),M(s)) : s \in (-\eps,\eps)\} \subset \mathcal{U} \times \R
+\{(v(s),M(s)) : s \in (-\varepsilon,\varepsilon)\} \subset \mathcal{U} \times \mathbb{R}
 $$
 
 the bifurcation branch obtained in Theorem \ref{thm:local-bifurcation}. Then, there exists a globally defined continuous curve
 $$
-\{(v(s),M(s)) : s \in \R\} \subset \mathcal{U} \times \R
+\{(v(s),M(s)) : s \in \mathbb{R}\} \subset \mathcal{U} \times \mathbb{R}
 $$ 
 consisting of smooth solutions to the bifurcation problem \eqref{eq:bifurcation-problem}, which is bounded in $\mathcal{X} \times (0,\infty)$ and such that
 $$
-	\inf_{s\in \R} \min_{x\in \bigl[-\tfrac{\pi}{k_0},\tfrac{\pi}{k_0}\bigr]}v(s) = -1.
+	\inf_{s\in \mathbb{R}} \min_{x\in \bigl[-\tfrac{\pi}{k_0},\tfrac{\pi}{k_0}\bigr]}v(s) = -1.
 $$ 
 To prove this theorem, we rely on analytic global bifurcation theory. This states that then local bifurcation curve can be extended to a global bifurcation curve if
 
 (1) $\partial_v F(v,M)$ is a Fredholm of index zero, whenever $F(v,M) = 0$;
-(2) bounded, closed subsets $\{F(v,M))=0\}$ are compact in $\mathcal{X}\times \R$.
+(2) bounded, closed subsets $\{F(v,M))=0\}$ are compact in $\mathcal{X}\times \mathbb{R}$.
 
 Moreover, at infinity, at least one of three conditions hold 
 
@@ -239,7 +251,7 @@ Finally, we show that any weak limit point of $(v(s))$ gives rise to a periodic,
 A weak stationary solution to [(1)](#tfe) is a function $h=h(x)$ such that
 
 $$
-\int_{\R} \left(h^3(\partial_x^3h-g\partial_x h) + M\frac{h^2}{(1+h)^2} \partial_xh \right) \partial_x \varphi \, \mathrm{d}x = 0
+\int_{\mathbb{R}} \left(h^3(\partial_x^3h-g\partial_x h) + M\frac{h^2}{(1+h)^2} \partial_xh \right) \partial_x \varphi \, \mathrm{d}x = 0
 $$
 holds for all $\varphi \in H^1(\mathbb{R})$ with compact support.
 
