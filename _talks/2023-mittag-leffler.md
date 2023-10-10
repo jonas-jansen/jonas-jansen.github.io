@@ -1,278 +1,251 @@
 ---
 layout: talk
-title: The gradient-flow structure of non-Newtonian thin-film equations
-description: Oberseminar Nichtlineare Differentialgleichungen, Universität Stuttgart 2023
-img: 
+title: Thermocapillary Thin Film Flows&#58; Periodic Steady States and Film Rupture
+description: Research Seminar Institut Mittag-Leffler, Stockholm 2023
 ---
 
-This is the manuscript of a blackboard talk. For the full result see [https://arxiv.org/abs/2301.10300](https://arxiv.org/abs/2301.10300)
+This is the manuscript of a blackboard talk. For the full result see [https://arxiv.org/abs/2308.11279](https://arxiv.org/abs/2308.11279)
 
 ### Introduction
 
-{% include figure.html path="assets/talks/thin-films-1d.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+##### Modelling
 
+{% include figure.html path="assets/talks/heat-thin-film.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
 We consider a thin liquid film of an
-- incompressible $$\operatorname{div} u =0$$
-- viscous
-- non-Newtonian $$\mu = \mu(\epsilon)$$
-fluid on a solid bottom such that
-- capillary forces dominate.
-We assume that the free boundary is given by the graph of a function $$h=h(t,x)$$
 
+- incompressible
+- viscous
+- Newtonian
+
+fluid on a solid **heated** plate such that
+
+- capillary forces dominate (that is surface tension is the driving force of the dynamics).
 
 **Assumptions**
 
-- We assume that the aspect ratio $$\varepsilon = \frac{H}{L} \ll 1$$ is very small. This will allow us to derive a closed equation for the film height $$u$$ via asymptotic analysis.
-- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in $$y$$-direction.
+- We assume that the free boundary is given by the graph of a function $h=h(t,x)$.
+- We assume that the aspect ratio $\varepsilon = \frac{H}{L} = \frac{\text{characteristic height}}{\text{characteristic length}} \ll 1$ is very small. This will allow us to derive a closed equation for the film height $u$ via asymptotic analysis.
+- We assume that the problem is one-dimensional, that is that the fluid is homogenenous in $y$-direction.
 
-**Governing equations**
+Henri Bénard observed in 1900 that regular polygonal – typically hexagonal – pattern emerge if the temperature difference between the heated solid bottom and the ambient air reaches a critical threshold. Even film-rupture states can emerge experimentally depending on the thickness of the film and the heat conduction of the ambient gas.
 
-The dynamics of the full problem is given by the Navier-Stokes equations in the moving domain $$\Omega(t)$$:
+It took over 50 years to understand the reason behind this phenomenon and it was Block and Pearson who demonstrated that the Bénard cells do form due to the *thermocapillary effect*.
 
-$$\left\{
-\begin{array}{rcl}
-\rho(\partial_t \vec{u} + (\vec{u}\cdot \nabla) \vec{u}) & = & \operatorname{div}\cdot T(p,\vec{u}) \\
-\operatorname{div} \vec{u} & = & 0 \\
-& \vdots & \\
-\text{B.C.}
-\end{array}
-\right. $$
+The thermocapillary effect says that due to the dependence of the surface tension on  
+temperature, temperature variations lead to (tangential) stress imbalances on the surface. Since, for most fluids, the surface tension is a decreasing function of the temperature, temperature imbalances generate flows of the fluid from warmer to colder regions, much as in the Marangoni effect. If this effect is stronger than the stabilising effect of surface tension, even small variations in the film height will be the cause of instability as the effect is self-reinforcing.
 
-For simplicity we omit gravitational forces by assuming they are much smaller than the capillary forces.
 
-**Rheology**
+{% include figure.html path="assets/talks/thermocapillary.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-- here: $$ T(p,\vec{u}) = -p\mathrm{Id} + \mu(D)D$$  is Cauchy stress tensor ($$D$$ is the symmetric gradient)
-- shear dependent viscosity $$\mu$$
-	- $$\mu\equiv c$$ -> Newtonian fluid
-	- $$\mu' >0$$ -> shear-thickening fluid
-	- $$\mu'<0$$ -> shear-thinning fluid
-- we will assume that the viscosity is explicitly given by the Ostwald-deWaele law
-$$ \mu(\epsilon) = \mu_0|\epsilon|^{\frac{1}{\alpha}-1} $$
+Mathematically, the problem is known as the *Bénard–Marangoni problem* and is usually modelled by the Boussinesq–Navier–Stokes system. This is a coupled system of the Navier–Stokes equations with a transport-diffusion equation for the temperature under the assumption that density variations due to buoyancy are negligible.
 
-**Boundary conditions**
+In the bulk region $\{(t,x,z) \in \mathbb{R}_+ \times \mathbb{R}^2 : 0 < z < h(t,x) \}$ we have for $u=(u_1,u_2)$:
+$$
+\left\{
+    \begin{array}{rcl}
+        \partial_t u+ (u\cdot\nabla)u & = & - \nabla p + \mu \Delta u - ge_z,  \\
+        \operatorname{div} u & = & 0,   \\
+        \partial_t T + (u\cdot \nabla) T & = & \chi \Delta T.
+    \end{array}
+    \right.
+$$
+and boundary conditions at the free boundary $z=h(t,x)$:
+- kinematic boundary condition: $\partial_t h + u_1h = u_2$
+- stress-balance condition: $\Sigma(p,u)n = \sigma \kappa n - (\partial_x T) \tau$ (here, $n$ is the outer unit normal, $\tau$ the tangential component, $\sigma$ the surface tension, $\kappa$ the curvature, and $\Sigma(p,u) = - p\mathrm{Id} + \frac{1}{2} (Du+Du^T)$ is the Cauchy stress tensor)
+- heat transfer condition: $k\nabla T n = -k(T-T_g)$ (k is the heat conductivity of the fluid, $K$ the heat exchange coefficient)
 
-- kinematic boundary condition: $$\partial_t h + u_h \partial_x h = u_v$$ (particles that are on the boundary remain on the boundary)
-- slip condition at solid bottom (e.g. $$\vec{u}=0$$)
-- stress-balance condition: $$T(p,\vec{u}) \cdot \vec{n} = \gamma \kappa \vec{n}$$, where $$\gamma$$ is the strength of surface tension, $$\kappa$$ is the curvature and $$\vec{n}$$ is the unit outer normal to the free boundary
-Idea: surface tension tries to equilibrate surface area (=length) of the surface
-
-$$E_{surface}[h] = \int_{\Omega} \sqrt{1+|\partial_xh(x)}\, \mathrm{d}x \sim |\Omega| + \int_{\Omega}\tfrac{1}{2} |\partial_x h(x)|^2 \, \mathrm{d}x$$
+and at the fluid-solid interface $z=0$:
+- slip condition: $u = 0$
+- heat transfer condition: $T = T_s$
 
 **Lubrication approximation**
 
-Asymptotic expansion in aspect ratio $$\varepsilon$$ and sending $$\varepsilon \searrow 0$$, we obtain a closed equation for the film height
+Rescaling the system by replacing $x$ with $\eps x$ and $t$ with $\eps^2 t$, we can obtain an asymptotic expansion in the aspect ratio $\varepsilon$. By sending $\varepsilon \searrow 0$, we obtain a closed equation for the film height
+$$\partial_t h + \partial_x \Bigl(h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0,\quad t>0,\ x\in \R \tag{1}$$<a id="tfe"></a>
+where $g>0$ is a gravitational constant and $M>0$ is the Marangoni number, which is proportional to the difference of the temperatures of the solid and the ambient gas.
 
-$$ \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h \bigr) = 0 $$
+##### Linear stability analysis
 
-### Gradient flows
+Since every constant height is a solution to equation [(1)](#tfe), we may choose our favourite height $\bar{h}=1$. Linearising about $\bar{h}$ gives the equation
+$$\partial_t w = \mathcal{L}w$$
+with linear operator
+$$ \mathcal{L}w = -\partial_x^4 w + \bigl(g - \tfrac{M}{4}\bigr)\partial_x^2 w.$$
+Plugging in the ansatz $w=\exp(\lambda t - ikx)$, we obtain the dispersion relation
+$$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2 $$
 
-Gradient flows are evolutionary systems driven by an energy, in the sense that the energy decreases along solutions, as fast as possible.
-Clasically,
+{% include figure.html path="assets/talks/long-wave.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-$$ \dot{x} = - \nabla E[x]$$
+At $M=M^* = 4g$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $M>M^*$, that waves with wave number $|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $k_0$ at $M=M^* +4k_0^2$. This discretises the spectrum and only waves with wave number $k_0$ destabilise.
 
-and we find that $$E$$ decreases along solutions
+##### Goals
 
-$$ \frac{d}{dt} E[x(t)] = \dot{x}(t) \nabla E[x(t)] = -|\nabla E[x(t)]|^2$$
+{% include figure.html path="assets/talks/bifurcation-diagram.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-What does *as fast as possible* mean? This is what is guaranteed by the dissipation mechanism.
+We will show
+- the existence of a local bifurcation branch at $M(k_0) = M^* + 4k_0^2$ consisting of $\frac{2\pi}{k_0}$-periodic even stationary solutions
+- that this branch can be extended to a global bifurcation branch whose limit points exhibit film rupture
+- show that limit points are weak even periodic stationary solutions
 
-Typically, equations have various gradient-flow structures, depending on the choice of energy and dissipation.
+### Hamiltonian formulation and local bifurcation branch
 
-**The thin-film equation**
+The main observation for the bifurcation analysis is that the stationary problem can be formulated as a Hamiltonian system.
+##### Derivation of the Hamiltonian formulation
 
-$$\left\{
-\begin{array}{rcll}
- \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h \bigr) & = & 0, & t>0,x\in \Omega\\
- \partial_x h = m(h)|\partial_x^3 h|^{\alpha-1}\partial_x^3h & = & 0, & t>0,x\in \partial\Omega\\
- h(0,x) & = & h_0(x), & x\in \Omega
-\end{array}
-\right. $$
+We study the stationary problem
 
-Note that solutions conserve their mass (this becomes evident either from modelling or from testing this equation with the function constantly equal to one):
+$$ \partial_x \Bigl((h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0$$
+and rewrite this using $h=\bar{h} + v = 1+v$ as
 
-$$ \frac{d}{dt} \int_{\Omega} h(t,x) \, \mathrm{d}x = 0. $$
+$$ \partial_x \Bigl((1+v)^3(\partial_x^3 v - g\partial_x v) + M\frac{(1+v)^2}{(2+v)^2}\partial_xv\Bigr) = 0 $$
 
-Then $$h$$ solves a continuity equation, i.e. there is a flux $$j$$ such that
+can be integrated once using that constant film heights are solutions:
 
-$$ \left\{\begin{array}{rcll}
-	\partial_t h + \partial_x j & = & 0, &t>0,x\in\Omega \\
-	\partial_x h = j & = & 0, & t>0, x\in\partial\Omega.
-\end{array}\right. $$
+$$(1+v)^3(\partial_x^3 v - g\partial_x v) + M\frac{(1+v)^2}{(2+v)^2}\partial_xv = 0 $$
 
-We have hence transformed the problem to finding a pair $$(h,j)$$ with $$j=m(h)\partial_x^3h$$.
-The capillary effects forces the film to reduce surface energy. This leads to the choice of the energy
+Dividing by $(1+v)^3$, we may integrate again and obtain the second-order ODE
+$$ \partial_x^2 v = gv - M\Bigl(\frac{1}{2+v} + \log\Bigl(\frac{1+v}{2+v}\Bigr) \Bigr) + MK$$
+with constant of integration $K$. The corresponding first-order system is a Hamiltonian system given the Hamiltonian
 
-$$ E[h] = \int_{\Omega} \tfrac{1}{2} |\partial_x h|^2 \,\mathrm{d} x.$$
-Then
-$$ \frac{d}{dt} E[h](t) = \int_{\Omega}\partial_{tx} h \partial_x h\, \mathrm{d}x = \underbrace{- \int_{\Omega} \partial_t h\partial_x^2 h \, \mathrm{d} x}_{=\langle DE[h],-\partial_x j\rangle} = \int_{\Omega} \partial_x^2 \partial_x j\, \mathrm{d} x = -\int_{\Omega} \partial_x^3 h j \, \mathrm{d}x.$$
+$$ \mathcal{H}(v,w) = \frac{1}{2}w^2 - \frac{g}{2} v^2 + M(1+v)\log\Bigl(\frac{1+v}{2+v}\Bigr) - MKv,$$
+where $w= \partial_x v$. 
 
-But how does $$j$$ dissipate energy? We need to choose a dissipation potential. We make the educated guess that $$j$$ is choosen as the minimiser of the functional
+Fixed points of the Hamiltonian system are given at $\nabla \mathcal{H}=0$, hence $w=0$ and $v$ satisfies
 
-$$ \langle DE[h],-\partial_x j\rangle + \tfrac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}}\,\mathrm{d} x.$$
+{% include figure.html path="assets/talks/fixed-points.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-Since if $$(h,j)$$ solve the continuity equation, this implies that (using that $$j$$ must be a critical point of this equation)
+{% include figure.html path="assets/talks/Hamiltonian.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-$$ \frac{|j|^{\frac{\alpha+1}{\alpha}-1}j}{m(h)^{\frac{1}{\alpha}}} = -\partial_x DE[h] = \partial_x^3h,$$
+On the left: $\mathcal{H}(v_u,0)< \mathcal{H}(-1,0)$, on the right $\mathcal{H}(v_u,0)> \mathcal{H}(-1,0)$.
 
-and hence
+If $K< \tfrac{1}{2} + \log\bigl(\tfrac{1}{2}\bigr)$ or $M \neq M^*$, there are two fixed points $-1< v_l \leq  0 \leq v_u$. (Note that the range of $K$ is necessary to obtain one negative and one positive fixed point.)
 
-$$ j = m(h)|\partial_x^3 h|^{\alpha-1}\partial_x^3h.$$
+Phase plane analysis of the Hamiltonian reveals the following phase portrait:
 
-Hence, we look for pairs $$(h,j)$$ that solve the continuity equation and that minimise the dissipation relation.
+{% include figure.html path="assets/talks/phase-portrait.png" class="img-fluid rounded z-depth-1" zoomable=false %}
+{% include figure.html path="assets/talks/phase-portrait-no-homoclinic.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-### Excurse: Positive solutions
+We conclude
+- $v_l$ is a *center* and there is a neighborhood of $v_l$ filled with periodic orbits
+- $v_u$ is a *saddle point* and provided $\mathcal{H}(v_u,0) \leq \mathcal{H}(-1,0)$, there is a homoclinic orbit about $v_u$
+- either this homoclinic orbit or the level set of $(-1,0)$ are the boundary of the set of periodic orbits
+- if there is a homoclinic orbit, there is a blue-sky catastrophe, that is the period goes to $+\infty$ as one approaches the homoclinic orbit
+##### Local bifurcation
 
-Eventually, we want to use this structure to find solutions. But: while for Newtonian thin-film equations, one can show non-negativity of solutions by using entropy methods, this method fails in general for non-Newtonian fluids.
+We now analyse the bifurcation of $\frac{2\pi}{k_0}$-periodic stationary solutions at Marangoni number $M = M^* +4k_0^2 > M^*$. We impose that the mass of the solution is conserved along a bifurcation curve, that is we impose
 
-For shear-thinning fluids, Ansini and Giacomelli introduced an additional term in the dissipation to obtain entropy methods for a modified equation. We choose a different approach: since we are working in an energy-driven scheme anyway, we modify the energy to force solutions away from zero: therefore, we introduce a strongly singular potential $$G$$ with
-- $$G_{\sigma} \in C^2((0,\infty))$$with $$G\geq 0$$
-- $$G_{\sigma}$$ is convex
-- $$G_{\sigma}(s)= 0$$ for $$s\geq 2\sigma$$ and $$G_{\sigma}(s) \geq s^{-2}$$ for $$s\leq \sigma$$
+$$\int_{-\frac{\pi}{k_0}}^{\frac{\pi}{k_0}} v(x) \, \mathrm{d}x = 0.$$
+Define the bifurcation problem
 
-Then, we introduce the new energy
+$$ F(v,M) := \partial_x^2v - gv + M\left( \frac{1}{2+v} + \log\left(\frac{1+v}{2+v}\right) \right) - MK(v)= \partial_x^2v + f_M(v) - MK(v) =0.$$
 
-$$ E^{\sigma}[h] = \int_{\Omega} \tfrac{1}{2} |\partial_x h|^2 +G_{\sigma}(h) \, \mathrm{d}x.$$
+That mass is conserved gives the condition on the constant of integration $K(v)$:
 
-Note that the control of $$h$$ in $$H^1(\Omega)$$ gives $$h\in C^{1/2}(\Omega)$$ and hence $$E^{\sigma}[h]<\infty$$ implies that $$h$$ must be strictly positive, since if $$h(x_0) = 0$$, we would get
+$$ K(v) = \frac{k_0}{2\pi} \int_{-\frac{\pi}{k_0}}^{\frac{\pi}{k_0}} \frac{1}{2+v} + \log\left(\frac{1+v}{2+v}\right)\, \mathrm{d}x.$$
+This definition asserts that $F$ leaves spaces of functions with mean zero invariant.
 
-$$\int_{x_0}^{x} G_{\sigma}(h)\, \mathrm{d}y \geq \int_{x_0}^{x} |h(y)-h(x_0)|^{-2} \,\mathrm{d} y \geq \int_{x_0}^{x} |x-x_0|^{-1} \,\mathrm{d}y = +\infty.$$
-
-In fact, families with uniformly bounded energy are uniformly bounded below.
-
-We then obtain $$DE^{\sigma}[h] = \partial_x^2 h - G_{\sigma}'(h)$$ and
-
-$$ j = m(h) |\partial_x^3h - G_{\sigma}''(h)\partial_xh|^{\alpha-1}(\partial_x^3h - G_{\sigma}''(h)\partial_xh).$$
-
-
-### Minimising-movement scheme
-
-We may use this method to construct solutions. Recall that we look for a pair of solutions $$(h,j)$$ that satisfies the continuity equation
-
-$$ \left\{\begin{array}{rcll}
-	\partial_t h + \partial_x j & = & 0, &t>0,x\in\Omega \\
-	\partial_x h = j & = & 0, & t>0, x\in\partial\Omega.
-\end{array}\right. $$
-
-and such that infinitesimally $$j$$ is chosen as the minimiser of the energy-dissipation functional
-
-$$ \frac{d}{dt}E^{\sigma}[h] + \frac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}}\, \mathrm{d} x$$
-
-Integrating in time, we get
-
-$$ E^{\sigma}[h](t_1) + \frac{\alpha}{\alpha+1} \int_{t_0}^{t_1}\int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}}\,\mathrm{d}x \,\mathrm{d}s = E^{\sigma}[h](t_0).\tag{1}$$
-
-One typically discretises the time, that is we introduce a minimising-movement scheme. The idea is, that if the system at time $$t$$ is in a state $$h^*$$, then after some time $$\tau$$ the system is in the state $$h(t+\tau)$$ chosen by following the curve $$(h,j)$$ solving the discretised continuity equation
-
-$$ \left\{\begin{array}{rcll}
-	\frac{h-h^*}{\tau} + \partial_x j & = & 0, &t>0,x\in\Omega \\
-	j & = & 0, & t>0, x\in\partial\Omega. \tag{2}
-\end{array}\right. $$
-
-and minimising the left-hand side of $$(1)$$. That is, we look for a minimiser $$(h,j)$$ of
-
-$$\mathcal{F}^{\sigma}_{\tau,h^*}[h,j] = E^{\sigma}[h] + \tau\tfrac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j|^{\frac{\alpha+1}{\alpha}}}{m(h^*)^{\frac{1}{\alpha}}} \, \mathrm{d} x.\tag{3}$$
-
-Note that we have changed the denominator of the dissipation potential to be evaluated at the previous state $$h^*$$ to make minimisation easier. It will turn out that solutions are continuous in time, hence this will not cause additional complications.
-
-Then, we can define the *minimising-movement scheme* with time step $$\tau>0$$:
+To study the bifurcation problem, we define the following function spaces such that $F\colon \mathcal{U}\times \mathbb{R}\to \mathcal{Y}$
 
 $$
 \begin{split}
-h^{\sigma}_{\tau,0} & = 0\\
-(h^{\sigma}_{\tau,k},j^{\sigma}_{\tau,k}) & = \text{minimiser of }\mathcal{F}_{\tau,h^{\sigma}_{\tau,k-1}} \text{ among all pairs } (h,j) \text{ solving }(2).
+\mathcal{X} & = \{v\in H^2_{\mathrm{per}} : \int_{-\frac{\pi}{k_0}}^{\frac{\pi}{k_0}} v(x) \, \mathrm{d}x = 0,\, v \text{ is even} \}, \\
+\mathcal{U} & = \{v\in \mathcal{X} : v > -1\},\\
+\mathcal{Y} & = \{v\in L^2_{\mathrm{per}} : \int_{-\frac{\pi}{k_0}}^{\frac{\pi}{k_0}} v(x) \, \mathrm{d}x = 0,\, v \text{ is even}  \}.
 \end{split}
 $$
+The restriction to even functions guarantees that the kernel of $L=\partial_v F(0,M^*(k_0)) = \partial_x^2 + k_0^2$ is one-dimensional and $\operatorname{ker} L = \operatorname{span}\{\cos(k_0x)\}$.
 
-This is a minimisation problem of a strictly convex functional with linear constraint. Unique minimisers exist by the direct method of the calculus of variations. The Euler-Lagrange equation is given by
+We can now apply the Crandall-Rabinowitz theorem to obtain a local bifurcation branch at $M^*(k_0)$.
 
+Theorem
+
+Fix $k_0 >0$. Then at $(0,M^*(k_0))$ a subcritical pitchfork bifurcation occurs and there exist $\eps >0$ and a branch of solutions
 $$
-\left\{
-\begin{array}{rcll}
-	\frac{h^{\sigma}_{\tau,k+1} - h^{\sigma}_{\tau,k}}{h} + \partial_x j^{\sigma}_{\tau,k+1} & = & 0, & x\in \Omega \\
-	\partial_x h^{\sigma}_{\tau,k+1} = j^{\sigma}_{\tau,k+1} & = & 0, & x\in \partial\Omega \\
-	j^{\sigma}_{\tau,k+1} & = & m(h^{\sigma}_{\tau,k})|\partial_x^3 h^{\sigma}_{\tau,k+1} - G_{\sigma}''(h^{\sigma}_{\tau,k+1})\partial_x h^{\sigma}_{\tau,k+1}|^{\alpha-1}(\partial_x^3 h^{\sigma}_{\tau,k+1} - G_{\sigma}''(h^{\sigma}_{\tau,k+1})\partial_x h^{\sigma}_{\tau,k+1}), & x\in \Omega
-\end{array}
-\right.
+        \{(v(s),M(s)) : s \in (-\eps,\eps)\} \subset \mathcal{U} \times \R
 $$
+to the bifurcation problem $F(v,M)=0$ with expansions
+$$
+	\begin{split}
+		v(s) &= s \cos(k_0 x) + \tau(s), \\
+		M(s) &= M^\ast(k_0) - \frac{(g+k_0^2)(8g+41k_0^2)}{12k_0^2} s^2 + \mathcal{O}(\vert s \vert^3),
+	\end{split}
+$$where $\tau = \mathcal{O}(\vert s \vert^2)$ in $\mathcal{X}$.
 
 
-**Energy-dissipation inequality**
+### Global bifurcation branch
 
-Naively, one obtains the inequality
+Next, we want to extend the local bifurcation branch to a global bifurcation branch and describe its behaviour at infinity.
 
-$$E^{\sigma}[h^{\sigma}_{\tau,k+1}] + \tau\tfrac{\alpha}{\alpha+1} \int_{\Omega} \frac{|j^{\sigma}_{\tau,k+1}|^{\frac{\alpha+1}{\alpha}}}{m(h^{\sigma}_{\tau,k})^{\frac{1}{\alpha}}} \, \mathrm{d} x = \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k+1},j^{\sigma}_{\tau,k+1}] \leq \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k},0] = E^{\sigma}[h^{\sigma}_{\tau,k}]. $$
+Theorem
 
-But we can do better using a trick due to de Giorgi. By convexity of both terms in the energy, we can improve this inequality to give
-
-$$E^{\sigma}[h^{\sigma}_{\tau,k+1}] + \tau \int_{\Omega} \frac{|j^{\sigma}_{\tau,k+1}|^{\frac{\alpha+1}{\alpha}}}{m(h^{\sigma}_{\tau,k})^{\frac{1}{\alpha}}} \, \mathrm{d} x = \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k+1},j^{\sigma}_{\tau,k+1}] \leq \mathcal{F}^{\sigma}_{\tau,h^{\sigma}_{\tau,k}}[h^{\sigma}_{\tau,k},0] = E^{\sigma}[h^{\sigma}_{\tau,k}]. $$
-
-Denote by
-
-$$\begin{split}
-	\hat{h}^{\sigma}(t) & = \text{linear interpolation between } h^{\sigma}_{\tau,k} \text{ and } h^{\sigma}_{\tau,k},\ t\in [\tau k,\tau(k+1)],\\
-	j^{\sigma}(t) & = j^{\sigma}_{\tau,k+1},\ t\in [\tau k,\tau(k+1)].
-\end{split}
+Let $k_0>0$ and 
+ $$
+\{(v(s),M(s)) : s \in (-\eps,\eps)\} \subset \mathcal{U} \times \R
 $$
 
- We are now in the position to send $$\tau \searrow 0$$, since we can obtain the required a-priori estimates from the energy-dissipation inequality.
-
-**Theorem** The limit $\tau \searrow 0$.
-
-Let $h_0\in H^1(\Omega)$ with finite energy $E^{\sigma}[h_0]<+\infty$. Then every accumulation point $(h^{\sigma},j^{\sigma})$ satisfisies
-
-$$ \left\{
-\begin{array}{rcll}
-	\partial_ t h^{\sigma} + \partial_x j^{\sigma} & = & 0, & x\in \Omega \\
-	\partial_x h^{\sigma} = j^{\sigma} & = & 0, & x\in \partial\Omega \\
-	j^{\sigma} & = & m(h^{\sigma})|\partial_x^3 h^{\sigma} - G_{\sigma}''(h^{\sigma})\partial_x h^{\sigma}|^{\alpha-1}(\partial_x^3h^{\sigma}-G''_{\sigma}(h^{\sigma})\partial_x h^{\sigma}), & x\in \Omega\\
-	h^{\sigma}(0,x) & = h_0(x).
-\end{array}
-\right.
+the bifurcation branch obtained in Theorem \ref{thm:local-bifurcation}. Then, there exists a globally defined continuous curve
 $$
+\{(v(s),M(s)) : s \in \R\} \subset \mathcal{U} \times \R
+$$ 
+consisting of smooth solutions to the bifurcation problem \eqref{eq:bifurcation-problem}, which is bounded in $\mathcal{X} \times (0,\infty)$ and such that
+$$
+	\inf_{s\in \R} \min_{x\in \bigl[-\tfrac{\pi}{k_0},\tfrac{\pi}{k_0}\bigr]}v(s) = -1.
+$$ 
+To prove this theorem, we rely on analytic global bifurcation theory. This states that then local bifurcation curve can be extended to a global bifurcation curve if
 
-and 
+(1) $\partial_v F(v,M)$ is a Fredholm of index zero, whenever $F(v,M) = 0$;
+(2) bounded, closed subsets $\{F(v,M))=0\}$ are compact in $\mathcal{X}\times \R$.
 
-$$ E^{\sigma}[h^{\sigma}](t_1) + \frac{\alpha}{\alpha+1}\int_{t_0}^{t_1}\int_{\Omega} \frac{|j^{\sigma}|^{\frac{\alpha+1}{\alpha}}}{m(h)^{\frac{1}{\alpha}}} \,\mathrm{d}x \,\mathrm{d}s + \frac{1}{\alpha+1} \int_{t_0}^{t_1}\int_{\Omega} m(h)|\partial_x^3h^{\sigma}-G''_{\sigma}(h^{\sigma})\partial_x h^{\sigma}|^{\alpha+1}\,\mathrm{d}x \,\mathrm{d}s = E^{\sigma}[h^{\sigma}](t_0). \tag{4} $$
+Moreover, at infinity, at least one of three conditions hold 
 
-Note that every solution actually satisfies the energy-dissipation equality for a.e. $$t_1>t_2\geq 0$$.
+(C1) blow-up: $\|(v(s),M(s))\|_{\mathcal{X}\times \mathbb{R}} \longrightarrow +\infty$
+(C2) solution approaches boundary of phase space $\mathcal{U}$, i.e. $\inf v(s) \longrightarrow -1$ as $s\to+\infty$
+(C3) $(v(s),M(s))$ is a closed loop
 
-In total, we have constructed positive weak solutions to a modified equation.
+For (1), observe that $\partial_v F(v,M) = \partial_x^2 \partial_x^{-2} \partial_v F(v,M) = \partial_x^2(\mathrm{Id} + R)$, where $R$ is a compact operator and $\partial_x^2$ is invertible from $\mathcal{X}\to\mathcal{Y}$, and(2) follows by standard elliptic regularity theory.
 
-### Results without modification
+Next, we rule out (C1) and (C3).
 
-In a second step, we want to remove the modification $$G_{\sigma}$$ from the equation. This can again be obtained by using a-priori estimates due to the energy-dissipation identity $$(4)$$. Then we can send $$\sigma\searrow 0$$. This result is summarised in the following theorem.
+##### Nodal property
 
-**Theorem** The limit $$\sigma\searrow 0$$.
+To rule out (C3), we use global bifurcation in cones. Define the cone
+$$
+	\mathcal{K} = \left\{v\in \mathcal{X} : v \text{ is non-decreasing in } \bigl(-\frac{\pi}{k_0},0\bigr) \right\}.
+$$
+The idea of the proof relies in showing a nodal property, that is, if $v(s)\in \mathcal{K}\setminus\{0\}$, then $v(s)$ must be strictly increasing in $\bigl(-\frac{\pi}{k_0},0\bigr)$. If it is not strictly increasing, one can find $x^*\in \bigl(-\tfrac{-\pi}{k_0},0\bigr)$ with $v'(x^*)=0$. Since $v$ is at the boundary of $\mathcal{K}$, it must also hold $v''(x^*)=0$. But then, differentiating $F(v,M)=0$, we obtain the ODE
+$$ \partial_x^3 v + f_M'(v)\partial_x v = 0.$$
+Writing $w=\partial_xv$, this has the initial conditions $w(x^*)=\partial_xw(x^*)=0$ and hence $w=0$, and so also $v=0$ as the mass is fixed to zero.
 
-Let $$h_0\in H^1(\Omega)$$. Then there exists an accumulation point
+##### Ruling out blow-up
 
-$$h\in L_{\infty}\bigl([0,\infty);H^1(\Omega)\bigr)\cap C^{\frac{1}{5\alpha+3},\frac{1}{2}}_{\mathrm{loc}}([0,\infty)\times\bar\Omega)$$
+Finally, we rule out (C1), that is blow-up of $\|(v(s),M(s)\|_{\mathcal{X}\times \mathbb{R}}$. The proof is rather technical and we give a sketch of the proof.
 
-with $$\partial_x^3 h\in L_{\alpha+1,\mathrm{loc}}(\{h>0\})$$ and $$\partial_t h \in L_{\alpha+1}\bigl((0,\infty);(W^1_{\alpha+1}(\Omega))'\bigr)$$ of $$(h^{\sigma})_{\sigma}$$ and $$h$$ is a global non-negative weak solution to
+**Step 1:** show by contradiction that film rupture must occur. 
+Idea: if $\inf_{s\in \R} \inf_{x} v(s) > c >-1$, this gives a lower bound for $K$. An upper bound for $M$ follows from proving that the maximal period of any periodic orbit tends to $0$ as $M\to+\infty$. This contradicts that solutions have a fixed period. A uniform bound for $v(s)$ in $\mathcal{X}$ then follows from standard elliptic regularity theory combined with a uniform upper bound of the upper fixed point, giving control of $v(s)$ in $L^{\infty}$. This would rule out both (C1) and (C2), a contradiction!
+
+**Step 2:** Without any additional assumptions, prove that $0< M_u <M(s)< M_l <\infty$ must be bounded above and below and $-\infty < K_u < K$. 
+Idea: if $M\to + \infty$ or $M\to 0$ or $K\to-\infty$ show that all periodic orbits lie in $-1<v <0$, a contradiction to the mass vanishing along the curve. This can be obtained from a rescaling argument in the Hamiltonian system.
+
+**Step 3:** Prove uniform bounds for $v(s)$ in $W^{2,p}_{\mathrm{per}}$ for any $1\leq p < \infty$. 
+Idea: since we obtained uniform bounds $M(s)$ and $K(v(s))$, we also obtain uniform $L^{\infty}$-bounds for $v(s)$. To obtain a uniform bound for the second derivative, it suffices to control $\log(1+v(s))$ in $L^p$ close to the minimum of $v$. A lower bound for the second derivative follows again from the ODE, as the vector field explods as $v\to -1$. Hence, $v$ behaves at least quadratically around its minimum and we obtain
+
+$$ \int \log(1+v(s))^p \mathrm{d}x \lesssim \int \log(|x-x_{\mathrm{min}}|^2)^p \mathrm{d} x < \infty.$$
+
+Hence, $v(s)$ is uniformly bounded in $W^{2,p}_\mathrm{per}$ for any $1\leq p <\infty$. This is optimal, since $v(s)$ blows up in $W^{2,\infty}_\mathrm{per}$ as the vector field blows up, when $v \to -1$.
+### Film rupture
+
+Finally, we show that any weak limit point of $(v(s))$ gives rise to a periodic, stationary weak solution to the thin-film equation that exhibits film rupture.
+
+A weak stationary solution to [(1)](#tfe) is a function $h=h(x)$ such that
 
 $$
-\left\{
-\begin{array}{rcll}
- \partial_t h + \partial_x\bigl( m(h)|\partial_x^3h|^{\alpha-1} \partial_x^3h \bigr) & = & 0, & t>0,x\in \Omega\\
- \partial_x h = m(h)\partial_x^3 h & = & 0, & t>0,x\in \partial\Omega\\
- h(0,x) & = & h_0(x), & x\in \Omega
-\end{array}
-\right.
+\int_{\R} \left(h^3(\partial_x^3h-g\partial_x h) + M\frac{h^2}{(1+h)^2} \partial_xh \right) \partial_x \varphi \, \mathrm{d}x = 0
 $$
+holds for all $\varphi \in H^1(\mathbb{R})$ with compact support.
 
-that satisfy and energy-dissipation inequality of the form
+Take any weak limit point $v_{\infty}\in \mathcal{X}$ of $v(s)$ and define $h_{\infty} = 1+v_{\infty}$. Since $v(s)$ is smooth, $h(s)=1+v(s)$ is a smooth solution to
+$$ \partial_x\left(h(s)^3(\partial_x^3h(s)-g\partial_x h(s)) + M\frac{h(s)^2}{(1+h(s))^2} \partial_xh(s)\right)=0.$$
+In particular, $h(s)$ is a weak stationary solution. Hence, it suffices to show that the nonlinear flux
 
-$$ \int_{\Omega}\tfrac{1}{2} |\partial_x h(t,x)|^2 \, \mathrm{d}x + \int_0^{t} \int_{\Omega} m(h) |\partial_x^3 h(s,x)|^{\alpha+1} \, \mathrm{d}x \,\mathrm{d}t \leq \int_{\Omega}\tfrac{1}{2} |\partial_x h_0(x)|^2 \, \mathrm{d}x.$$
-We may lose equality precisely when the solution becomes zero.
-
-*Strategy of proof*
-
-- Obtain uniform Hölder continuity for $$(h^{\sigma})_{\sigma}$$ from Sobolev embedding in space and equation
-- Use a-priori bounds from energy-dissipation inequality
-- Identify limit of non-linear flux by localised version of Minty's trick
-
-In particular, the thin-film equation is a gradient-flow for positive film heights.
-
+$$h(s)^3(\partial_x^3h(s)-g\partial_x h(s)) + M\frac{h(s)^2}{(1+h(s))^2} \partial_xh(s)\rightharpoonup h_{\infty}^3(\partial_x^3h_{\infty}-g\partial_x h_{\infty}) + M\frac{h_{\infty}^2}{(1+h_{\infty})^2} \partial_xh_{\infty}$$
+converges weakly in $L^2_\mathrm{per}$ locally on the set $\{h_{\infty}>0\}$. This follows after one obtains uniform bounds of $\partial_x^3 h(s)$ in $L^2$ locally on $\{h_{\infty}>0\}$. Then, passing in the limit in the weak formulations, proves that $h_{\infty}$ is indeed a weak, periodic, stationary solution which exhibits film rupture.
