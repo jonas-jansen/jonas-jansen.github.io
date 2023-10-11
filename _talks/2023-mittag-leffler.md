@@ -65,7 +65,7 @@ and at the fluid-solid interface $$z=0$$:
 
 Rescaling the system by replacing $$x$$ with $$\varepsilon x$$ and $$t$$ with $$\varepsilon^2 t$$, we can obtain an asymptotic expansion in the aspect ratio $$\varepsilon$$. By sending $$\varepsilon \searrow 0$$, we obtain a closed equation for the film height
 
-$$\partial_t h + \partial_x \Bigl(h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0,\quad t>0,\ x\in \R \tag{1}$$<a id="tfe"></a>
+$$\partial_t h + \partial_x \Bigl(h^3(\partial_x^3 h - g\partial_x h) + M\frac{h^2}{(1+h)^2}\partial_xh\Bigr) = 0,\quad t>0,\ x\in \mathbb{R} \tag{1}$$<a id="tfe"></a>
 
 where $$g>0$$ is a gravitational constant and $$M>0$$ is the Marangoni number, which is proportional to the difference of the temperatures of the solid and the ambient gas.
 
