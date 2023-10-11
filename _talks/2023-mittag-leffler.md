@@ -83,9 +83,10 @@ Plugging in the ansatz $$w=\exp(\lambda t - ikx)$$, we obtain the dispersion rel
 
 $$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2$$
 
+At $$M=M^* = 4g$$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $$M>M^*$$, that waves with wave number $$|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $$k_0$$ at $$M=M^* +4k_0^2$$. This discretises the spectrum and only waves with wave number $$k_0$$ destabilise.
+
 {% include figure.html path="assets/talks/long-wave.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
-At $$M=M^* = 4g$$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $$M>M^*$$, that waves with wave number $$|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $$k_0$$ at $$M=M^* +4k_0^2$$. This discretises the spectrum and only waves with wave number $$k_0$$ destabilise.
 
 ##### Goals
 
@@ -252,7 +253,7 @@ Writing $$w=\partial_xv$$, this has the initial conditions $$w(x^*)=\partial_xw(
 Finally, we rule out (C1), that is blow-up of $$\|(v(s),M(s)\|_{\mathcal{X}\times \mathbb{R}}$$. The proof is rather technical and we give a sketch of the proof.
 
 **Step 1:** show by contradiction that film rupture must occur. 
-Idea: if $$\inf_{s\in \R} \inf_{x} v(s) > c >-1$$, this gives a lower bound for $$K$$. An upper bound for $$M$$ follows from proving that the maximal period of any periodic orbit tends to $$0$$ as $$M\to+\infty$$. This contradicts that solutions have a fixed period. A uniform bound for $$v(s)$$ in $$\mathcal{X}$$ then follows from standard elliptic regularity theory combined with a uniform upper bound of the upper fixed point, giving control of $$v(s)$$ in $$L^{\infty}$$. This would rule out both (C1) and (C2), a contradiction!
+Idea: if $$\inf_{s\in \mathbb{R}} \inf_{x} v(s) > c >-1$$, this gives a lower bound for $$K$$. An upper bound for $$M$$ follows from proving that the maximal period of any periodic orbit tends to $$0$$ as $$M\to+\infty$$. This contradicts that solutions have a fixed period. A uniform bound for $$v(s)$$ in $$\mathcal{X}$$ then follows from standard elliptic regularity theory combined with a uniform upper bound of the upper fixed point, giving control of $$v(s)$$ in $$L^{\infty}$$. This would rule out both (C1) and (C2), a contradiction!
 
 **Step 2:** Without any additional assumptions, prove that $$0< M_u <M(s)< M_l <\infty$$ must be bounded above and below and $$-\infty < K_u < K$$. 
 Idea: if $$M\to + \infty$$ or $$M\to 0$$ or $$K\to-\infty$$ show that all periodic orbits lie in $$-1<v <0$$, a contradiction to the mass vanishing along the curve. This can be obtained from a rescaling argument in the Hamiltonian system.
