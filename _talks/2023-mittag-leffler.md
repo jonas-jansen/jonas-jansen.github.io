@@ -81,9 +81,9 @@ $$ \mathcal{L}w = -\partial_x^4 w + \bigl(g - \tfrac{M}{4}\bigr)\partial_x^2 w.$
 
 Plugging in the ansatz $$w=\exp(\lambda t - ikx)$$, we obtain the dispersion relation
 
-$$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2$$
+$$ \lambda(k) = - k^4 + \bigl(\tfrac{M}{4} - g\bigr)k^2.$$
 
-At $$M=M^* = 4g$$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $$M>M^*$$, that waves with wave number $$|k| \leq k_0 = \sqrt{\frac{(M-M^*)}{4}}$$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $$k_0$$ at $$M=M^* +4k_0^2$$. This discretises the spectrum and only waves with wave number $$k_0$$ destabilise.
+At $$M = M ^*=4g$$, the quadratic coefficient changes sign and the system undergoes a (conserved) long-wave instability. This suggests, for $$M>M^*$$, that waves with wave number $$\vert k\vert \leq k_0=\sqrt{\frac{(M-M^*)}{4}}$$ destabilise. We will be interested in the bifurcation of periodic patterns with the fixed wave number $$k_0$$ at $$M=M^* +4k_0^2$$. This discretises the spectrum and only waves with wave number $$k_0$$ destabilise.
 
 {% include figure.html path="assets/talks/long-wave.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
