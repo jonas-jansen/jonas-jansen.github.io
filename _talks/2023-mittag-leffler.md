@@ -90,12 +90,12 @@ At $$M = M ^*=4g$$, the quadratic coefficient changes sign and the system underg
 
 ##### Goals
 
-{% include figure.html path="assets/talks/bifurcation-diagram.png" class="img-fluid rounded z-depth-1" zoomable=false %}
-
 We will show
 - the existence of a local bifurcation branch at $$M(k_0) = M^* + 4k_0^2$$ consisting of $$\frac{2\pi}{k_0}$$-periodic even stationary solutions
 - that this branch can be extended to a global bifurcation branch whose limit points exhibit film rupture
 - show that limit points are weak even periodic stationary solutions
+
+{% include figure.html path="assets/talks/bifurcation-diagram.png" class="img-fluid rounded z-depth-1" zoomable=false %}
 
 ### Hamiltonian formulation and local bifurcation branch
 
