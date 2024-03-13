@@ -1,5 +1,5 @@
 ---
-layout: talk
+layout: manim
 title: The shape of water: the maths of fluids in video games and movies
 description: NMT-days 2024, Lunds Universitet
 img: 
