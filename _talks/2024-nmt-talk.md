@@ -1,5 +1,8 @@
 ---
-layout: default
+layout: talk
+title: The shape of water: the maths of fluids in video games and movies
+description: NMT-days 2024, Lunds Universitet
+img: 
 ---
 
 {% include slides.html url="/assets/slides/nmt-slides-final.html" %}
