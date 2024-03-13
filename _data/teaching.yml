@@ -1,8 +1,38 @@
+- course: Linjär Algebra
+  title: Linjär Algebra
+  term: Spring Term 2024
+  role: Tutor
+  category: current
+  page: false
+  uni: Lund
+  img:
+  caption:
+
+- course: Matematisk Modellering
+  title: Matematisk Modellering
+  term: Spring Term 2024
+  role: Supervisor
+  category: current
+  page: false
+  uni: Lund
+  img:
+  caption:
+
+- course: Linear and Combinatorial Optimization
+  title: Linear and Combinatorial Optimization
+  term: Spring Term 2024
+  role: Lecturer
+  category: past
+  page: false
+  uni: Lund
+  img:
+  caption:
+
 - course: Endimensionell analys
   title: Endimensionell analys
   term: Winter Term 2023
   role: Tutor
-  category: current
+  category: past
   page: false
   uni: Lund
   img:
