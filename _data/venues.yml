@@ -5,3 +5,7 @@
 "SIMA":
   url: https://www.siam.org/publications/journals/siam-journal-on-mathematical-analysis-sima
   color: "#7172AF"
+
+"Nonlinearity":
+  url: https://iopscience.iop.org/journal/0951-7715
+  color: "#BE0004"
