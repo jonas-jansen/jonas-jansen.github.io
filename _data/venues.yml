@@ -9,3 +9,7 @@
 "Nonlinearity":
   url: https://iopscience.iop.org/journal/0951-7715
   color: "#BE0004"
+
+  "ARMA":
+  url: https://link.springer.com/journal/205
+  color: "#FFDB5A"
