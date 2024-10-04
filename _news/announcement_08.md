@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2024-10-04 06:00:00
+date: 2024-10-04 00:00:00
 title: New Preprint online arXiv:2410.02708
 inline: false
 ---
