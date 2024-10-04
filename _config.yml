@@ -71,10 +71,11 @@ gitlab_username: # your GitLab user name
 twitter_username: jonasjansenmath  # your Twitter handle
 mastodon_username: https://mathstodon.xyz/web/@jonasjansen # your full mastodon link
 linkedin_username: jonas-jansen-26183029b # your LinkedIn user name
+linkedin_username: hexasquare # your YouTube name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-orcid_id: # your ORCID ID
+orcid_id: 0009-0008-0258-5459 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons

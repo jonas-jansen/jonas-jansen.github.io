@@ -22,15 +22,18 @@
             {%- if site.github_username -%}
             <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fab fa-github"></i></a>
             {% endif %}
+            {%- if site.youtube_username -%}
+            <a href="https://github.com/@{{ site.youtube_username }}" title="YouTube"><i class="fab fa-youtube"></i></a>
+            {% endif %}
             {%- if site.linkedin_username -%}
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             {% endif %}
             {%- if site.twitter_username -%}
             <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="fab fa-twitter"></i></a>
             {% endif %}
-	    {% if site.mastodon_username -%}
-	    <a href="https://mathstodon.xyz/web/@jonasjansen" title="Mastodon"><i class="fab fa-mastodon"></i></a>
-	    {% endif %}
+            {% if site.mastodon_username -%}
+            <a href="https://mathstodon.xyz/web/@jonasjansen" title="Mastodon"><i class="fab fa-mastodon"></i></a>
+            {% endif %}
             {%- if site.medium_username -%}
             <a href="https://medium.com/@{{ site.medium_username }}" title="Medium"><i class="fab fa-medium"></i></a>
             {% endif %}
