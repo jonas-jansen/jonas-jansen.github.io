@@ -6,13 +6,13 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Jonas
 middle_name: 
 last_name: Jansen
-email: jonas.jansen@math.lth.se
+email: jonasjansen@posteo.de
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Jonas Jansen's webpage
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jansen, lund university, thin-film equations, academia  # add your own keywords or leave empty
+keywords: jansen, science communication, academia, pattern formation, Fraunhofer  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

@@ -6,10 +6,10 @@ subtitle: Marketing, Science Communication and Young Talents Promotion at <a hre
 
 profile:
   align: right
-  image: me.png
+  image: jansen.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Schloss Birlinghove</p>
+    <p>Schloss Birlinghoven</p>
     <p>53757 Sankt Augustin, Germany</p>
 
 news: true  # includes a list of news items
