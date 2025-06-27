@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Zelluläre Automaten</title>
+<link rel="stylesheet" href="{{ '/assets/css/styles_automaton.css' | relative_url }}">
+</head>
+
+<div id="ruleContainer">
+  <div id="rulePreview"></div>
+  <div id="ruleHeader">
+    <label id="ruleLabel" for="ruleInput">Rule:</label>
+    <input type="number" id="ruleInput" min="0" max="255" value="30" />
+    <button id="startBtn"  data-tooltip="Start / Pause"></button>
+    <button id="resetBtn"  data-tooltip="Reset"></button>
+    <button id="randomBtn" data-tooltip="Zufall"></button>
+    </div>
+</div>
+
+<canvas id="caCanvas" width="1200"></canvas>
+
+
+<script src="{{ '/assets/js/automaton.js' | relative_url }}"></script>
