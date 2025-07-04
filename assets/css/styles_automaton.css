@@ -152,7 +152,7 @@ button#startBtn.paused::before {
 
 button#resetBtn::before {
   content: "\27F3"; /* clockwise arrow */
-  font-size: 265px;
+  font-size: 26px;
   position: static;
 }
 
