@@ -10,4 +10,4 @@ category: Sommerschule
 
 <h5 style="color: var(--global-theme-color);"> Conway's Spiel des Lebens ausprobieren</h5>
 
-<a href="/conway/" target="_blank" rel="noopener noreferrer">Conway's Spiel des Lebens</a>
+<a href="/apps/conway/" target="_blank" rel="noopener noreferrer">Conway's Spiel des Lebens</a>

@@ -10,4 +10,4 @@ category: Sommerschule
 
 <h5 style="color: var(--global-theme-color);">Simulation des Nagel-Schreckenberg-Modells</h5>
 
-<a href="/nagel-schreckenberg/" target="_blank" rel="noopener noreferrer">Nagel-Schreckenberg-Modell</a>
+<a href="/apps/nagel-schreckenberg/" target="_blank" rel="noopener noreferrer">Nagel-Schreckenberg-Modell</a>
