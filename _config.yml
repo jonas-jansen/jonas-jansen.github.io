@@ -137,6 +137,9 @@ external_sources:
 # -----------------------------------------------------------------------------
 
 collections:
+  apps:
+    output: true
+    permalink: /apps/:name/
   news:
     defaults:
       layout: post
