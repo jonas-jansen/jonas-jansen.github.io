@@ -8,6 +8,22 @@
     - name: Languages
       value: English, German
 
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Science Communication and Young Talents Promotion
+      institution: Marketing and Communication, Fraunhofer SCAI, Sankt Augustin, Germany
+      year: 2024 - today
+
+    - title: PostDoc
+      institution: LTH, Lunds Universitet, Lund, Sweden
+      year: 2022 - 2024
+
+    - title: Wissenschaftlicher Mitarbeiter
+      institution: Institute for Applied Mathematics, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany
+      year: 2018 - 2022
+
 - title: Education
   type: time_table
   contents:
@@ -24,17 +40,7 @@
       description:
         - Thesis&#58; "Renormalization group methods for Stochastic PDEs".
         - Supervisor&#58; Massimiliano Gubinelli.
-         
-- title: Experience
-  type: time_table
-  contents:
-    - title: PostDoc
-      institution: LTH, Lunds Universitet, Lund, Sweden
-      year: 2022 - today
-
-    - title: Wissenschaftlicher Mitarbeiter
-      institution: Institute for Applied Mathematics, Rheinische Friedrich-Wilhelms-Universität Bonn, Bonn, Germany
-      year: 2018 - 2022
+        
 
 - title: Teaching Experience
   type: time_table
