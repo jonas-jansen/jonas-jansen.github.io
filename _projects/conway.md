@@ -4,7 +4,7 @@ title: Conway's Spiel des Lebens
 description: 
 img: assets/img/img_Conway.png
 importance: 1
-category: summerschool
+category: Sommerschule
 ---
 
 
