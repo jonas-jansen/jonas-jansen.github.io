@@ -309,7 +309,7 @@ const spaceHeight = 40;
 const spaceWidth = 40;
 const delay = 100;
 
-const automaton = new Conway(spaceHeight,spaceWidth, "periodic");
+const automaton = new Conway(spaceHeight,spaceWidth);
 const renderer = new Renderer(canvas, automaton);
 const controller = new Controller(canvas, automaton, renderer,delay);
 
