@@ -8,6 +8,6 @@ category: Sommerschule
 ---
 
 
-<h5 style="color: var(--global-theme-color);">Simulation des Nagel-Schreckenberg-Modells</h5>
+<h5 style="color: var(--global-theme-color);">Beispiel für zelluläre Automaten</h5>
 
-<a href="/apps/cellular_automata/" target="_blank" rel="noopener noreferrer">Zelluläre Automaten</a>
+<a href="/apps/cellular-automata/" target="_blank" rel="noopener noreferrer">Zelluläre Automaten</a>
