@@ -122,6 +122,7 @@ programmiererfahrung: bool = True
 
 ##### Strings
 
+{:.table}
 | Operator | Beschreibung              | Beispiel            | Ergebnis       |
 | -------- | ------------------------- | ------------------- | -------------- |
 | `+`      | Verketten (zusammenfügen) | `"Hallo" + " Welt"` | `"Hallo Welt"` |
@@ -251,6 +252,17 @@ else:
 	Befehl2
 ```
 
+Manchmal möchte man eine Schleife vorzeitig beenden, wenn eine bestimmte Bedingung erfüllt ist. Dafür gibt es in Python das Schlüsselwort `break`.
+
+```python
+i = 0
+while True:
+    print(i)
+    if i == 3:
+        break  
+    i += 1
+```
+
 ##### `for`-Schleifen
 
 Eine `for`-Schleife ist ein anderer Schleifentyp. Sie wird verwendet, um eine Aufgabe für alle Elemente einer Sequenz durchzuführen (z. B. eine Liste, ein range()-Objekt oder eine Zeichenkette). Das ist die Syntax:
@@ -300,7 +312,7 @@ Wenn du möchtest, dass eine Funktion etwas zurückgibt, verwendest du `return`:
 
 ```python
 def quadrat(x: float) -> float:
-	return x * x
+    return x * x
 
 ergebnis = quadrat(5)
 ```
