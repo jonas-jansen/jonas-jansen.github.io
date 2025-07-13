@@ -133,6 +133,7 @@ programmiererfahrung: bool = True
 
 ##### Integer und Floats
 
+{:.table}
 | Operator | Beschreibung               | Beispiel | Ergebnis |
 | -------- | -------------------------- | -------- | -------- |
 | `+`      | Addition                   | `5 + 3`  | `8`      |
@@ -147,6 +148,7 @@ programmiererfahrung: bool = True
 
 ##### Wahrheitswerte
 
+{:.table}
 | Operator | Beschreibung        | Beispiel         | Ergebnis |
 | -------- | ------------------- | ---------------- | -------- |
 | `and`    | Logisches UND       | `True and False` | `False`  |
@@ -157,6 +159,7 @@ programmiererfahrung: bool = True
 
 ##### Listen
 
+{:.table}
 | Befehl / Funktion     | Beschreibung                                | Beispiel                        | Ergebnis / Effekt              |
 | --------------------- | ------------------------------------------- | ------------------------------- | ------------------------------ |
 | `+`                   | Listen zusammenfügen                        | `[1, 2] + [3, 4]`               | `[1, 2, 3, 4]`                 |
@@ -175,6 +178,7 @@ programmiererfahrung: bool = True
 
 ##### Tupel
 
+{:.table}
 |Operator / Funktion|Beschreibung|Beispiel|Ergebnis|
 |---|---|---|---|
 |`[]`|Zugriff auf Elemente|`tupel[1]`|Wert an Index 1|
@@ -184,6 +188,7 @@ programmiererfahrung: bool = True
 
 ##### Mengen
 
+{:.table}
 |Operator / Methode|Beschreibung|Beispiel|Ergebnis|
 |---|---|---|---|
 |`.add()`|Element hinzufügen|`s.add(4)`|`{1, 2, 3, 4}`|
@@ -195,6 +200,7 @@ programmiererfahrung: bool = True
 
 ##### Wörterbücher
 
+{:.table}
 |Operator / Methode|Beschreibung|Beispiel|Ergebnis|
 |---|---|---|---|
 |`[]`|Zugriff auf Wert|`person["name"]`|`"Ada"`|
@@ -207,6 +213,7 @@ programmiererfahrung: bool = True
 
 Wir können Datentypen umwandeln. Das ist besonders wichtig für die `input`-Funktion. Diese gibt einen String zurück. Wenn wir aber beispielsweise eine Zahl einlesen wollen, müssen wir diese umwandeln, wenn wir mit ihr Rechenoperationen durchführen können. Hier ist eine Liste der Datenumwandlungen:
 
+{:.table}
 | Funktion   | Wandelt um zu  | Beispiel                     | Ergebnis / Erklärung               |
 | ---------- | -------------- | ---------------------------- | ---------------------------------- |
 | `str(x)`   | Zeichenkette   | `str(123)`                   | `"123"` (aus Zahl wird Text)       |
@@ -276,6 +283,7 @@ for Variable in Sequenz:
 
 Mit der Funktion `range()` kannst du **Zahlenbereiche** erzeugen, die du z. B. in einer `for`-Schleife durchlaufen kannst.
 
+{:.table}
 |Ausdruck|Beschreibung|Ergebnis von `list(range(...))`|
 |---|---|---|
 |`range(5)`|Von 0 bis 4 zählen|`[0, 1, 2, 3, 4]`|
@@ -345,6 +353,7 @@ quadratzahlen = [x*x for x in range(5)] # [0,1,4,9,16]
 gerade_zahlen = [x for x in range(10) if x%2 == 0] # [0,2,4,6,8]
 ```
 
+{:.table}
 |Teil|Bedeutung|Beispiel|
 |---|---|---|
 |`x for x in ...`|alle Elemente übernehmen|`[x for x in liste]`|
