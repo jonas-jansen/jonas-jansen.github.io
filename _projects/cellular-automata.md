@@ -4,7 +4,7 @@ title: Zelluläre Automaten
 description: 
 img: assets/img/img_Conway.png
 importance: 3
-category: Sommerschule
+category: Projektarbeiten
 ---
 
 

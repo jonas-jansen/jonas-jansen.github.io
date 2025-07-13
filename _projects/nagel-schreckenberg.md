@@ -4,7 +4,7 @@ title: Nagel-Schreckenberg-Modell
 description: 
 img: assets/img/img_Conway.png
 importance: 2
-category: Sommerschule
+category: Projektarbeiten
 ---
 
 
