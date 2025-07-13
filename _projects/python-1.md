@@ -259,7 +259,7 @@ else:
 	Befehl2
 ```
 
-Manchmal möchte man eine Schleife vorzeitig beenden, wenn eine bestimmte Bedingung erfüllt ist. Dafür gibt es in Python das Schlüsselwort `break`.
+Manchmal möchte man eine Schleife vorzeitig beenden, wenn eine bestimmte Bedingung erfüllt ist. Dafür gibt es in Python das Schlüsselwort `break`. Manchmal möchte man frühzeitig in den nächsten Schleifendurchlauf springen. Dafür gibt es das Schlüsselwort `continue`.
 
 ```python
 i = 0

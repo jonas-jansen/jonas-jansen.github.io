@@ -9,6 +9,8 @@ display_categories: [Python,Pythonaufgaben,Projektarbeiten]
 horizontal: true
 ---
 
+[📄 Python-Bibliotheken herunterladen](assets/pdf/python.txt)
+
 <!-- pages/projects.md -->
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
