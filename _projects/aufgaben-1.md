@@ -64,7 +64,13 @@ Wo liegt das Problem?
 Welche Wahrheitswerte erwartest du bei folgenden Variablen?
 
 ```python
-pi = 3.14159265 groesse_ihres_computers = 4.5 großer_computer = groesse_ihres_computers > 2 ist_pi_gleich_drei = pi == 3 und_operator = großer_computer and ist_pi_gleich_drei oder_operator = großer_computer or ist_pi_gleich_drei not_operator = not(ist_pi_gleich_drei)
+pi = 3.14159265
+groesse_ihres_computers = 4.5
+großer_computer = groesse_ihres_computers > 2
+ist_pi_gleich_drei = pi == 3
+und_operator = großer_computer and ist_pi_gleich_drei
+oder_operator = großer_computer or ist_pi_gleich_drei
+not_operator = not(ist_pi_gleich_drei)
 ```
 ---
 ### Aufgabe: Benutzereingaben
