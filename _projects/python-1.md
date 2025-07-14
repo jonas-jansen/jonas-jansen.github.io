@@ -225,6 +225,7 @@ Wir können Datentypen umwandeln. Das ist besonders wichtig für die `input`-Fun
 | `tuple(x)` | Tupel          | `tuple([1, 2])`              | `(1, 2)`                           |
 | `set(x)`   | Menge          | `set([1, 2, 2, 3])`          | `{1, 2, 3}` (Duplikate entfernt)   |
 | `dict(x)`  | Wörterbuch     | `dict([("a", 1), ("b", 2)])` | `{"a": 1, "b": 2}`                 |
+
 ### Bedingungen
 
 Nun wollen wir lernen, wie ein Python-Programm Entscheidungen treffen kann. Dies passiert durch die Verwendung von Bedingungen und Kontrollstrukturen. Bedingungen nehmen dabei immer Wahrheitswerte an, sind also entweder `True`oder `False`. Ein Beispiel für eine Bedingung ist `k > 100`. Diese Bedingung überprüft, ob die vorher definierte Variable `k` größer als 100 ist. Es ist dabei wichtig, dass `k` den Datentyp einer Zahl hat (Integer oder Float). Dies sieht folgendermaßen aus:

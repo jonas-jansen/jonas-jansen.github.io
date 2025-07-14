@@ -138,11 +138,11 @@ und $$n$$ groß. Kennst du das Ergebnis schon?
 
 Man nennt dieses Verhalten Konvergenz: wenn $$n$$ größer und größer wird, kommt die Summe $$e^x$$ immer näher, wir schreiben auch:
 
-$$\sum_{k=0}^{n} \frac{1}{n!}x^n \longrightarrow e^x \quad \text{für } n\to \infty.$$
+$$\sum_{k=0}^{n} \frac{1}{k!}k^n \longrightarrow e^x \quad \text{für } n\to \infty.$$
 
 Verwende die Konvergenz
 
-$$\sum_{k=1}^{n} \frac{1}{k!} \longrightarrow \frac{\pi^2}{6} \quad \text{für } n\to \infty,$$
+$$\sum_{k=1}^{n} \frac{1}{k^2} \longrightarrow \frac{\pi^2}{6} \quad \text{für } n\to \infty,$$
 
 um $$\pi$$ anzunähern.
 
