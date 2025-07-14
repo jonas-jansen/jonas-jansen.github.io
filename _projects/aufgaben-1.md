@@ -74,9 +74,9 @@ not_operator = not(ist_pi_gleich_drei)
 ```
 ---
 ### Aufgabe: Benutzereingaben
-1) Schreibe ein Programm, das den Benutzer erst nach seinem Namen und dann nach seinem Geburtsjahr fragt. Gib dann den Namen des Benutzers und sein Geburtsjahr in einem ganzen Satz aus.
-2) Schreibe ein Programm, das eine ganze Zahl einliest und dann das Quadrat dieser Zahl ausgibt.
-3) Schreibe ein Programm, das zwei ganze Zahlen einliest und die größere der beiden Zahlen ausgibt.
+    1) Schreibe ein Programm, das den Benutzer erst nach seinem Namen und dann nach seinem Geburtsjahr fragt. Gib dann den Namen des Benutzers und sein Geburtsjahr in einem ganzen Satz aus.
+    2) Schreibe ein Programm, das eine ganze Zahl einliest und dann das Quadrat dieser Zahl ausgibt.
+    3) Schreibe ein Programm, das zwei ganze Zahlen einliest und die größere der beiden Zahlen ausgibt.
 
 ---
 

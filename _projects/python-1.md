@@ -209,6 +209,7 @@ programmiererfahrung: bool = True
 |`.values()`|Liste der Werte|`person.values()`|`dict_values([...])`|
 |`.items()`|Schlüssel-Wert-Paare|`person.items()`|`dict_items([...])`|
 |`in`|Prüfen, ob Schlüssel existiert|`"name" in person`|`True`|
+
 ### Datentypen umwandeln
 
 Wir können Datentypen umwandeln. Das ist besonders wichtig für die `input`-Funktion. Diese gibt einen String zurück. Wenn wir aber beispielsweise eine Zahl einlesen wollen, müssen wir diese umwandeln, wenn wir mit ihr Rechenoperationen durchführen können. Hier ist eine Liste der Datenumwandlungen:
