@@ -169,13 +169,15 @@ Implementiere eine Funktion, die die Anzahl an Punkten $$n$$ erhält und dann de
 
 Hilfe: Mit Hilfe der Funktion `random.uniform(-1,1)`kannst du eine Zufallszahl zwischen -1 und 1 erzeugen. Wenn du einen Punkt $$(x,y)$$ gewählt hast, kannst du prüfen, ob $$ x^2 + y^2 < 1$$ gilt, um herauszufinden, ob er im Kreis mit Radius 1 liegt.
 
+Bestimme mit der gleichen Methode den Flächeninhalt einer Ellipse. Hast du eine Idee, wie man den Flächeninhalt eines Polygons bestimmen kann? Ein Polygon ist dabei eine Fläche, die von einer Menge von Geraden umschlossen wird.
+
 
 ---
 ### Die Collatz-Vermutung
 
-Implementiere folgende Funktion: die Funktion soll eine ganze Zahl $n$ erhalten. Sie soll dann die Folge von Zahlen mit folgenden Eigenschaften bestimmen: $x_1 = n$. Für das nächste Element $x_2$ der Folge gilt dann: wenn $x_1$ gerade ist, ist $x_2 = \frac{n}{2}$; wenn $x_1$ ungerade ist, ist $x_2 = 3n+1$. Genauso bestimmen wir $x_3$ aus $x_2$ und so weiter. Lass die Funktion eine Liste mit den so erhaltenen Zahlen ausgeben. Teste deine Funktion mit ganz vielen Anfangswerten $n$. Erkennst du ein Muster?
+Implementiere folgende Funktion: die Funktion soll eine ganze Zahl $$n$$ erhalten. Sie soll dann die Folge von Zahlen mit folgenden Eigenschaften bestimmen: $$x_1 = n$$. Für das nächste Element $$x_2$$ der Folge gilt dann: wenn $$x_1$$ gerade ist, ist $$x_2 = \frac{n}{2}$$; wenn $$x_1$$ ungerade ist, ist $$x_2 = 3n+1$$. Genauso bestimmen wir $$x_3$$ aus $$x_2$$ und so weiter. Lass die Funktion eine Liste mit den so erhaltenen Zahlen ausgeben. Teste deine Funktion mit ganz vielen Anfangswerten $n$. Erkennst du ein Muster?
 
-(Dieses Muster ist auch unter dem Namen Collatz-Vermutung bekannt. Lothar Collatz hat 1937 die Vermutung aufgestellt, dass für jede natürliche Zahl $n$ irgendwann dieses Muster entsteht. Aber bisher konnte das niemand beweisen.)
+(Dieses Muster ist auch unter dem Namen Collatz-Vermutung bekannt. Lothar Collatz hat 1937 die Vermutung aufgestellt, dass für jede natürliche Zahl $$n$$ irgendwann dieses Muster entsteht. Aber bisher konnte das niemand beweisen.)
 
 ---
 ### Aufgabe: Fakultät
