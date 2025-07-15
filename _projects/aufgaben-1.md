@@ -180,16 +180,16 @@ Implementiere folgende Funktion: die Funktion soll eine ganze Zahl $n$ erhalten.
 ---
 ### Aufgabe: Fakultät
 
-Besondere Funktionen sind rekursive Funktionen. Das sind Funktionen, die sich selbst wieder aufrufen. Ein einfaches Beipspiel ist die Fakultät einer positive ganzen Zahl, geschrieben $n!$. $n!$ ist einfach das Produkt aller positiven ganzen Zahlen bis $n$, also $n! = 1\cdot 2\cdot 3 \cdots (n-1)\cdot n$. Wir könnten das natürlich einfach über eine Schleife implementieren.
-Aber manchmal ist es besser, etwas anderes zu bemerken. Und zwar: $n! = (n-1)! \cdot n$. Also, wenn wir schon die Fakultät von $n-1$ kennen, können wir diese einfach mit $n$ multiplizieren. Aber wie können wir die Fakultät von $n-1$ kennen? Naja, wenn wir $(n-2)!$ kennen würden, wäre das einfach, und so weiter. Aber wie hört das auf? Naja, $1! = 1$ ist eine gute Abbruchbedingung.
+Besondere Funktionen sind rekursive Funktionen. Das sind Funktionen, die sich selbst wieder aufrufen. Ein einfaches Beipspiel ist die Fakultät einer positive ganzen Zahl, geschrieben $n!$. $n!$ ist einfach das Produkt aller positiven ganzen Zahlen bis $n$, also $$n! = 1\cdot 2\cdot 3 \cdots (n-1)\cdot n$$. Wir könnten das natürlich einfach über eine Schleife implementieren.
+Aber manchmal ist es besser, etwas anderes zu bemerken. Und zwar: $$n! = (n-1)! \cdot n$$. Also, wenn wir schon die Fakultät von $$n-1$$ kennen, können wir diese einfach mit $n$ multiplizieren. Aber wie können wir die Fakultät von $$n-1$$ kennen? Naja, wenn wir $$(n-2)!$$ kennen würden, wäre das einfach, und so weiter. Aber wie hört das auf? Naja, $$1! = 1$$ ist eine gute Abbruchbedingung.
 Wir können das nun auch Python beibringen: schreibe eine Funktion `fakultaet(n)`, die folgendes macht: wenn $n=1$ ist, gibt sie einfach $1$ zurück. Sonst gibt sie `fakultaet(n-1) * n`zurück.
 
 ---
 ### Aufgabe: Fibonacci-Zahlen
 
-Ein anderes Problem, das man rekursiv lösen kann, sind Fibonacci-Zahlen. Fibonacci-Zahlen sind die Zahlen $1,1,2,3,5,8,13,21,34,55,\ldots$ und so weiter. Erkennst du das Muster? Wenn ja, kannst du bestimmt erklären, warum wenn $x_k$ die $k$-te Fibonacci-Zahl ist, gilt, dass
+Ein anderes Problem, das man rekursiv lösen kann, sind Fibonacci-Zahlen. Fibonacci-Zahlen sind die Zahlen $$1,1,2,3,5,8,13,21,34,55,\ldots$$ und so weiter. Erkennst du das Muster? Wenn ja, kannst du bestimmt erklären, warum wenn $x_k$ die $k$-te Fibonacci-Zahl ist, gilt, dass
 $$x_k = x_{k-1} + x_{k-2}$$
-gilt. Bestimme die $k$-te Fibonacci-Zahl mit einem rekursiven Algorithmus. (Hinweis: wie viele Grundfälle benötigst du? Überlege mal, was du festlegen musst, um $x_3$ eindeutig zu bestimmen.)
+gilt. Bestimme die $k$-te Fibonacci-Zahl mit einem rekursiven Algorithmus. (Hinweis: wie viele Grundfälle benötigst du? Überlege mal, was du festlegen musst, um $$x_3$$ eindeutig zu bestimmen.)
 
 Nachdem du das implementiert hast, berechne mal die 50-te, 60-te und 70-te Fibonacci-Zahl. Was stellst du fest? Hast du eine Idee, warum? Findest du einen anderen Weg, die Fibonacci-Zahlen zu bestimmen?
 
