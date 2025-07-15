@@ -233,4 +233,4 @@ Implementiere eine Funktion, die alle Primzahlen bis zu einem Eingabewert $$N$$ 
 
 Implementiere das Spiel Tic-Tac-Toe. Verwende für die Darstellung des Spielbretts eine mehrdimensionale Liste.
 
-Wenn ihr schnell fertig seid, implementiert das Spiel Meta-Tic-Tac-Toe.
+Wenn ihr schnell fertig seid, implementiert das Spiel [Meta-Tic-Tac-Toe](https://de.wikipedia.org/wiki/Meta-Tic-Tac-Toe).
