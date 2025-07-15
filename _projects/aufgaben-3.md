@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projektaufgabe Vier gewinnt
+title: Aufgaben zu Klassen
 description: 
 img: 
 importance: 3
@@ -10,7 +10,7 @@ category: Pythonaufgaben
 
 ### Aufgabe: Geometrische Formen
 
-Schreibe eine Klasse `Rechteck`und schreibe Methoden, die den Flächeninhalt und Umfang zurückgeben. Schreibe eine Methode, die zurückgibt, ob das Rechteck ein Quadrat ist.
+Schreibe eine Klasse `Rechteck`. Welche Attribute sollte diese Klassen haben? Schreibe Methoden, die den Flächeninhalt und Umfang zurückgeben. Schreibe eine Methode, die zurückgibt, ob das Rechteck ein Quadrat ist.
 
 
 ### Aufgabe: Klasse rationale Zahlen
