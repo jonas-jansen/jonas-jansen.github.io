@@ -37,13 +37,10 @@ Erinnerung: die Tangente an den Punkt $x_0$ von $f$ hat die Form $y = f'(x_0) x 
 
 Dann suchen wir einfach die Nullstelle der Tangente und nennen den Punkt $x_1$. Es gilt
 $$ x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}.$$
-Überzeuge dich selbst davon, dass das Ergebnis stimmt. Wie beim Heron-Verfahren können wir das nun iterativ fortsetzen. Und dann aufhören, wenn $f(x_n) < fehlertoleranz$ für eine vorher festgelegte Fehlertoleranz ist.
+Überzeuge dich selbst davon, dass das Ergebnis stimmt. Wie beim Heron-Verfahren können wir das nun iterativ fortsetzen und genau dann aufhören, wenn $$]f(x_n)| < fehlertoleranz$$ für eine vorher festgelegte Fehlertoleranz ist.
 
 Um das zu implementieren benötigen wir: eine Funktion `f(x)`und eine Funktion `ableitung_f(x)` und dann eine Funktion `Newton(x_0,fehlertoleranz,f,ableitung_f)`.
 
-1) Implementiere das Newton-Verfahren wie oben.
-2) Momentan müssen wir noch für jede Funktion die Ableitung von Hand berechnen. Das kann aber schnell sehr kompliziert werden. Hast du eine Idee, wie man die Ableitung einer Funktion annäherungsweise bestimmen kann?
+    1) Implementiere das Newton-Verfahren wie oben.
+    2) Momentan müssen wir noch für jede Funktion die Ableitung von Hand berechnen. Das kann aber schnell sehr kompliziert werden. Hast du eine Idee, wie man die Ableitung einer Funktion annäherungsweise bestimmen kann?
 
-### Numerische Integration
-
-Du findest die gesamte Aufgabe auf folgender Seite:

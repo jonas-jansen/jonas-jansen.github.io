@@ -194,8 +194,41 @@ gilt. Bestimme die $k$-te Fibonacci-Zahl mit einem rekursiven Algorithmus. (Hinw
 Nachdem du das implementiert hast, berechne mal die 50-te, 60-te und 70-te Fibonacci-Zahl. Was stellst du fest? Hast du eine Idee, warum? Findest du einen anderen Weg, die Fibonacci-Zahlen zu bestimmen?
 
 ---
+### Aufgabe: Euklidischer Algorithmus
+
+Der Euklidische Algorithmus bestimmt den größten gemeinsamen Teiler zweier ganzer Zahlen $$a$$ und $$b$$.  Und das geht so:
+- teile die größere Zahl durch die kleinere und bestimme den Rest.
+- Teile dann die kleinere Zahl durch den Rest und bestimme erneut den Rest dieser Division.
+- Fahre so fort, bis der Rest 0 wird. Der letzte Rest, der nicht 0 war, ist der größte gemeinsame Teiler.
+
+Beispiel: für den ggT von $$36$$ und $$15$$ rechnen wir zunächst: 
+
+$$36/15 = 2 \text{ Rest } 6$$
+
+Dann
+
+$$ 15 / 6 = 2 \text{ Rest } 3 $$
+
+und schließlich
+
+$$ 6 / 3 = 2 \text{ Rest }0.$$
+
+Also ist `ggT(36,15) = 3`.
+
+Implementiere dies als Funktion.
+
+---
+### Aufgabe: Sieb des Erastosthenes
+
+Das Sieb des Erasthotenes bestimmt alle Primzahlen bis zu einem Maximalwert $$N.$$ Das geht wie folgt: man schreibe alle Zahlen von 2 bis $$N$$ auf und stellt sich vor, dass zunächst alle Zahlen unmarkiert sind. Die erste unmarkierte Zahl ist immer eine Primzahl. Wenn eine Primzahl gefunden wurde, werden alle Vielfachen dieser Primzahl als zusammengesetzt markiert. Dann sucht man die nächstgrößere, noch nicht markierte Zahl. Da sie kein Vielfaches von kleineren Zahlen ist, muss sie selbst eine Primzahl sein. Dieses Verfahren setzt man fort, bis man $$N$$ erreicht hat.
+
+Implementiere eine Funktion, die alle Primzahlen bis zu einem Eingabewert $$N$$ ausgibt.
+
+---
 # Mehrdimensionale Listen
 
-### Tic-Tac-Toe
+### Aufgabe: Tic-Tac-Toe
 
 Implementiere das Spiel Tic-Tac-Toe. Verwende für die Darstellung des Spielbretts eine mehrdimensionale Liste.
+
+Wenn ihr schnell fertig seid, implementiert das Spiel Meta-Tic-Tac-Toe.
