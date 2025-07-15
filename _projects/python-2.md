@@ -83,6 +83,7 @@ adas_alter = ada.berechne_alter(2025)
 
 In Python gibt es eine Reihe von magischen Methoden, so genannten Dunder Methoden (Dunder = Double UNDERscore):
 
+{:.table}
 | Methode                 | Zweck / Wird aufgerufen bei …                     | Beispiel            |
 | ----------------------- | ------------------------------------------------- | ------------------- |
 | `__init__(self, ...)`   | Konstruktor: Beim Erstellen eines Objekts         | `obj = Klasse(...)` |

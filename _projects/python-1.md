@@ -194,7 +194,7 @@ programmiererfahrung: bool = True
 |`.add()`|Element hinzufügen|`s.add(4)`|`{1, 2, 3, 4}`|
 |`.remove()`|Element entfernen|`s.remove(2)`|`{1, 3}` (wenn 2 enthalten war)|
 |`in`|Mitglied testen|`3 in s`|`True`|
-|`|`|Vereinigung (Union)|`{1, 2}|
+|`\|`|Vereinigung (Union)|`{1, 2}|
 |`&`|Schnittmenge (Intersection)|`{1, 2} & {2, 3}`|`{2}`|
 |`-`|Differenz|`{1, 2, 3} - {2}`|`{1, 3}`|
 
