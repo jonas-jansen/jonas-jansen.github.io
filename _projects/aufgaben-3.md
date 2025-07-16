@@ -32,6 +32,13 @@ In dieser Aufgabe soll das Spiel Vier gewinnt implementiert werden. Wir gehen di
 
 Schreibe eine Klasse `Spielbrett`, die das Spielbrett enthält. Schreibe eine Methode, die das Spielbrett in das Terminal schreibt.
 
+Ihr könnt alle bisherigen Eingaben mit folgendem Command aus dem Terminal entfernen:
+
+```python
+        os.system('cls' if os.name == 'nt' else 'clear')
+``````
+Dafür müsst ihr `import os`verwenden!`
+
 ##### Aufgabe 2: Spielzüge
 
 Wir fügen nun nach und nach weitere Methoden hinzu, die uns langfristig dabei helfen, das Spiel zu implementieren.
