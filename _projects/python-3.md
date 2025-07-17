@@ -28,6 +28,7 @@ category: Python
 
 ### Zugriff auf Numpy Arrays
 
+{:.table}
 | Syntax      | Bedeutung           | Beispiel    |
 | ----------- | ------------------- | ----------- |
 | `arr[i]`    | Element bei Index i | `arr[0]`    |
@@ -36,6 +37,7 @@ category: Python
 | `arr[:, j]` | Ganze Spalte        |             |
 | `arr[i, :]` | Ganze Zeile         |             |
 | `arr.T`     | Transponiert        |             |
+
 ### Rechnen mit Numpy Arrays
 
 {:.table}
