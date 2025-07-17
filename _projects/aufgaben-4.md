@@ -7,6 +7,8 @@ importance: 4
 category: Pythonaufgaben
 ---
 
+Für ein Beispielsbild [https://jonas-jansen.github.io/assets/img/Schloss2.jpg](https://jonas-jansen.github.io/assets/img/Schloss2.jpg)
+
 Ein Graustufenbild ist horizontal und vertikal in Bildpunkte (Pixel) eingeteilt. Jedes Pixel nimmt dabei einen Wert zwischen 0 und 1 an. Dabei entspricht die Helligkeit 0 der Farbe schwarz und die Helligkeit 1 der Farbe weiß. Wir verwenden hier Portable Greymap File Format.
 
 Schreibe eine Klasse `Bild`, die die Ausmaße des Bilds abspeichert und das Bild in einem `np.array`. Schreibe Methoden, um Bilder automatisiert einzulesen.
