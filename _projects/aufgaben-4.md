@@ -60,7 +60,14 @@ Diese Funktion macht jedes Pixel entweder schwarz oder weiß. Dafür legen wir e
 Bei Faltungsoperatoren hängt der neue Bildpunkt am Ort $$(x,y)$$ nicht nur vom alten Bildpunkt am Ort $$(x,y)$$ ab, sondern auch von Punkten, die nahe dran liegen. Um dies zu erreichen, verwenden wir so genannte Filter und das Prinzip der Faltung. Für eine Matrix $$K = \begin{pmatrix} K(-1,-1) & K(-1,0) & K(-1,1) \\ K(0,-1) & K(0,0) & K(0,1) \\ K(1,-1) & K(1,0) & K(1,1) \end{pmatrix}$$ (die Filtermatrix), definieren wir das neue Bild
 
 $$ \text{Neues\_Bild}(x,y) = \sum_{i=-1}^{1}\sum_{j=-1}^{1} K(i,j)\cdot \text{Altes\_Bild}(x+i,y+j)$$
-Für Randpunkte $$(𝑥, 𝑦)$$ des Bildes ergibt sich dabei das Problem, dass gewisse Nachbarpunkte $$(x+i,y+j)$$ gar nicht existieren; aus diesem Grund stelle man sich das Bild über den Rand hinaus fortgesetzt vor, und zwar mit dem Wert des nächstgelegenen Bildpunktes.  Typische Filter findet ihr in folgendem Wörterbuch
+
+Für Randpunkte $$(𝑥, 𝑦)$$ des Bildes ergibt sich dabei das Problem, dass gewisse Nachbarpunkte $$(x+i,y+j)$$ gar nicht existieren; aus diesem Grund stelle man sich das Bild über den Rand hinaus fortgesetzt vor, und zwar mit dem Wert des nächstgelegenen Bildpunktes. Wir schreiben auch
+
+$$ \text{Neues\_Bild}(x,y) = (K * \text{Altes\_Bild})(x,y)
+
+
+
+Typische Filter findet ihr in folgendem Wörterbuch
 
 ```python
 filter = {
@@ -97,7 +104,17 @@ filter = {
 }
 ```
 
-Implementiert Methoden der Klasse Bild, mit denen ihr die Filter anwendet.
+Implementiert folgende Methoden der Klasse Bild:
+
+- `blur()`: Tiefpassfilter
+- `kirsch()`: Kirschfilter
+- `laplace()`: Laplacefilter
+- `sobel()`: Sobelfilter, hier ist $$\text{Neues\_Bild}(x,y) = \sqrt{(\text{Neues\_Bild} * \text{Sobel\_DX} (x,y))^2 + {(\text{Altes\_Bild} * \text{Sobel\_DY}(x,y))}.$$ Man kann die Funktionen `**2`und `np.sqrt` übrigens direkt auf ein `np.array` anwenden. Das passiert dann komponentenweise.
+- `median(fenster_größe:int)`: setzt einen Pixel auf den Median eines Fensters mit Größe $$2*\text{fenster_größe}+1$$ zentriert in diesem Pixel
+
+Welche Effekte haben die unterschiedlichen Methoden? Wendet danach mehrere eurer Methoden nacheinander an und studiert die Ergebnisse.
+
+Ein Farbbild kann im einfachsten Fall als RGB geschrieben werden. Dabei besteht jedes Pixel aus drei Werten für rot, grün und blau. Ergänzt eure Methoden, sodass sie auch farbige Bilder bearbeiten können.
 
 ### Aufgabe
 
