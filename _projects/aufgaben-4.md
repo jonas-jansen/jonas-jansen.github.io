@@ -30,7 +30,7 @@ Diese erzeugt automatisch ein Numpy-Array der richtigen Größe mit den entsprec
 def write_image(self,name):
 	img = (self.bild*255).astype(np.uint8)
 	image = Image.fromarray(img, mode='L')
-	img.save(f"{name}.jpg",format='JPEG')
+	image.save(f"{name}.jpg",format='JPEG')
 	print(f"Bild gespeichert als {name}.jpg")
 ```
 
