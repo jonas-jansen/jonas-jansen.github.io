@@ -109,7 +109,7 @@ Implementiert folgende Methoden der Klasse Bild:
 - `blur()`: Tiefpassfilter
 - `kirsch()`: Kirschfilter
 - `laplace()`: Laplacefilter
-- `sobel()`: Sobelfilter, hier ist $$\text{Neues\_Bild}(x,y) = \sqrt{(\text{Neues\_Bild} * \text{Sobel\_DX} (x,y))^2 + {(\text{Altes\_Bild} * \text{Sobel\_DY}(x,y))}.$$ Man kann die Funktionen `**2`und `np.sqrt` übrigens direkt auf ein `np.array` anwenden. Das passiert dann komponentenweise.
+- `sobel()`: Sobelfilter, hier ist $$\text{Neues\_Bild}(x,y) = \sqrt{(\text{Neues\_Bild} * \text{Sobel\_DX} (x,y))^2 + (\text{Altes\_Bild} * \text{Sobel\_DY}(x,y))^2}.$$ Man kann die Funktionen `**2`und `np.sqrt` übrigens direkt auf ein `np.array` anwenden. Das passiert dann komponentenweise.
 - `median(fenster_größe:int)`: setzt einen Pixel auf den Median eines Fensters mit Größe $$2*\text{fenster_größe}+1$$ zentriert in diesem Pixel
 
 Welche Effekte haben die unterschiedlichen Methoden? Wendet danach mehrere eurer Methoden nacheinander an und studiert die Ergebnisse.
