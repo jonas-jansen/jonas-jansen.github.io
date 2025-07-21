@@ -26,9 +26,8 @@ Mathematik kann viele Gesichter haben. Manche beschäftigen sich mit theoretisch
 Beides hängt eng zusammen: Damit Simulationen realistische und zuverlässige Ergebnisse liefern, braucht man solide theoretische Grundlagen. Und umgekehrt führen praktische Probleme oft zu neuen theoretischen Fragen.
 ### Simulation statt exakte Lösung
 
-Die meisten Gleichungen, die reale Phänomene beschreiben, sind zu kompliziert, um sie „per Hand“ oder mit einfachen Formeln zu lösen. Deshalb nutzt man den Computer. Man nähert sich der Lösung an – Schritt für Schritt, mit sogenannten numerischen Methoden. Dabei wird aus der ursprünglichen Gleichung ein Algorithmus, den der Computer bearbeiten kann.
+Die meisten Gleichungen, die reale Phänomene beschreiben, sind zu kompliziert, um sie per Hand oder mit einfachen Formeln zu lösen. Deshalb nutzt man den Computer. Man nähert sich der Lösung an – Schritt für Schritt, mit sogenannten numerischen Methoden. Dabei wird aus der ursprünglichen Gleichung ein Algorithmus, den der Computer bearbeiten kann.
 
-In diesem Modul lernst du, wie man einfache Phänomene mit Hilfe von **partiellen Differentialgleichungen** beschreibt – und vor allem, wie man sie **numerisch löst**.
 # Kapitel 1 - Lineare Gleichungssysteme
 
 # Lineare Gleichungssysteme – ein Einstieg
