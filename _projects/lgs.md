@@ -169,7 +169,7 @@ Mit jeder weiteren Iteration nähert man sich der exakten Lösung.
 
 ### 3. Das Gauß–Seidel-Verfahren
 
-Das **Gauß–Seidel-Verfahren** ist ähnlich zum Jacobi-Verfahren, aber effizienter. Hier verwenden wir innerhalb einer Iteration **sofort die neuesten Werte**.
+Das **Gauß–Seidel-Verfahren** ist ähnlich zum Jacobi-Verfahren, aber effizienter. Hier verwenden wir innerhalb einer Iteration sofort die neuesten Werte.
 
 **Startwert:** $$ x^{(0)} = 0 $$, $$ y^{(0)} = 0 $$
 
