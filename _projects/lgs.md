@@ -2,7 +2,7 @@
 layout: page
 title: Große lineare Gleichungssysteme schnell lösen
 description: 
-img:
+img: assets/img/img_Conway.png
 importance: 4
 category: Projektarbeiten
 ---
@@ -203,4 +203,4 @@ $$
 x^{(k+1)} := (1 - \omega) x^{(k)} + \omega \cdot \text{(neuer Wert aus Gauß–Seidel)}
 $$
 
-Für $$ \omega = 1 $$ ist das Verfahren identisch mit Gauß–Seidel. Für $$ \omega > 1 $$ „übertreibt“ man die Korrektur – dadurch kann die Konvergenz beschleunigt werden, wenn das System dafür geeignet ist.
+Für $$ \omega = 1 $$ ist das Verfahren identisch mit Gauß–Seidel. Für $$ \omega > 1 $$ übertreibt man die Korrektur – dadurch kann die Konvergenz beschleunigt werden, wenn das System dafür geeignet ist.
