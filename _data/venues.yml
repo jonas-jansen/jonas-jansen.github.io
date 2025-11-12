@@ -21,3 +21,7 @@
 "J Math Phys":
   url: https://pubs.aip.org/aip/jmp
   color: "#501634"
+
+"PhysD":
+  url: https://www.sciencedirect.com/journal/physica-d-nonlinear-phenomena
+  color: "#8A542A"
