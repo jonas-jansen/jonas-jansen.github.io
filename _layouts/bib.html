@@ -55,21 +55,15 @@
                 {%- endif -%}
               {%- endfor -%}
             {%- endif -%}
-
-            {%- if forloop.length == 2 -%}
-              {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
-            {%- endif -%}
-            {%- if author_is_self -%}
-              <em>{{author.first}} {{author.last}}</em>
-            {%- else -%}
-              {%- if coauthor_url -%}
-                <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
-              {%- else -%}
-                {{author.first}} {{author.last}}
-              {%- endif -%}         
-            {%- else -%}
-              {%- if forloop.first == false -%},&nbsp;{%- endif -%}
-              {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
+            
+            {%- if forloop.length > 1 -%}
+              {%- unless forloop.first -%}
+                {%- if forloop.last -%}
+                  {%- if author_array_size > 2 -%}, and&nbsp;{%- else -%}&nbsp;and&nbsp;{%- endif -%}
+                {%- else -%}
+                  ,&nbsp;
+                {%- endif -%}
+              {%- endunless -%}
             {%- endif -%}
             {%- if author_is_self -%}
               <em>{{author.first}} {{author.last}}</em>
