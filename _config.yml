@@ -68,7 +68,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: jonasjansenmath  # your Twitter handle
+twitter_username: # your Twitter handle
 mastodon_username: https://mathstodon.xyz/web/@jonasjansen # your full mastodon link
 linkedin_username: jonas-jansen-26183029b # your LinkedIn user name
 youtube_username: hexasquares # your YouTube name
