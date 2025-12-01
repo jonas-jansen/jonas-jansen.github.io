@@ -9,7 +9,7 @@ display_categories: [Python,Pythonaufgaben,Projektarbeiten]
 horizontal: true
 ---
 
-[📄 Python-Bibliotheken herunterladen](jonas-jansen.github.io/assets/pdf/python.txt)
+[📄 Python-Bibliotheken herunterladen](https://jonas-jansen.github.io/assets/pdf/python.txt)
 
 <!-- pages/projects.md -->
 <div class="projects">
