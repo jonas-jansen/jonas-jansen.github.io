@@ -12,15 +12,15 @@
 
 "ARMA":
   url: https://link.springer.com/journal/205
-  color: "#FFDB5A"
+  color: "#FFE06B"
 
 "J Nonlinear Sci":
   url: https://link.springer.com/journal/332
-  color: "#ED9A37"
+  color: "#F9A21B"
 
 "J Math Phys":
   url: https://pubs.aip.org/aip/jmp
-  color: "#501634"
+  color: "#5A1438"
 
 "PhysD":
   url: https://www.sciencedirect.com/journal/physica-d-nonlinear-phenomena
