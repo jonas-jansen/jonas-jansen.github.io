@@ -1,7 +1,8 @@
 ---
 layout: null
-permalink: /apps/hexagonal-lattice.html
+nav: false
 ---
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
