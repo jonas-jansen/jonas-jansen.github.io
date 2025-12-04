@@ -1,0 +1,131 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>Objektorientiere Programmierung und Klassen | Jonas Jansen</title> <meta name="author" content="Jonas Jansen"> <meta name="description" content="Zusammenfassung des Materials und Spickzettel"> <meta name="keywords" content="jansen, science communication, academia, pattern formation, Fraunhofer"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png"> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="canonical" href="https://jonas-jansen.github.io/projects/python-2/"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js"></script> <script src="/assets/js/dark_mode.js"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Jonas </span>Jansen</a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about</a> </li> <li class="nav-item "> <a class="nav-link" href="/asymptotic-models/">joint seminar</a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching</a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications</a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">curriculum vitae</a> </li> <li class="nav-item "> <a class="nav-link" href="/sommerschule/">sommerschule</a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">talks</a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fas fa-moon"></i> <i class="fas fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5"> <div class="post"> <header class="post-header"> <h1 class="post-title">Objektorientiere Programmierung und Klassen</h1> <p class="post-description">Zusammenfassung des Materials und Spickzettel</p> </header> <article> <p>Klassen sind Baupläne für Objekte. In heutigen Programmiersprachen besteht alles aus Klassen. Eine Klasse besteht aus Attributen und Methoden. Attributen sind das, was ein Objekt weiß, Methoden sind das, was ein Objekt kann.</p> <p>Wir erzeugen eine Klasse wie folgt:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">class</span> <span class="nc">Name_der_Klasse</span><span class="p">:</span>
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">parameter</span><span class="p">):</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">attribut_1</span> <span class="o">=</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">attribut_2</span> <span class="o">=</span>
+		<span class="bp">...</span>
+</code></pre></div></div> <p><code class="language-plaintext highlighter-rouge">__init__()</code>nennt man den Konstruktor. Hier erklären wir, wie eine Objekt aufgebaut ist. Jede Klasse hat einen Konstruktor. <code class="language-plaintext highlighter-rouge">self</code> ist immer das erste Argument in Klassenmethoden – es bedeutet “dieses Objekt selbst”. Es ist notwendig, um auf die Attribute und andere Methoden des Objekts zuzugreifen.</p> <p>Zum Beispiel können wir eine Klasse Person erstellen</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">geburtsjahr</span><span class="p">,</span><span class="n">beruf</span><span class="p">):</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">geburtsjahr</span> <span class="o">=</span> <span class="n">geburtsjahr</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">=</span> <span class="n">beruf</span>
+
+<span class="n">ada</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Ada</span><span class="sh">"</span><span class="p">,</span><span class="mi">1815</span><span class="p">,</span><span class="sh">"</span><span class="s">Programmierin</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div> <p>Methoden sind Funktionen innerhalb einer Klasse. Sie beschreiben Verhalten.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">geburtsjahr</span><span class="p">,</span><span class="n">beruf</span><span class="p">):</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">geburtsjahr</span> <span class="o">=</span> <span class="n">geburtsjahr</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">=</span> <span class="n">beruf</span>
+
+	<span class="k">def</span> <span class="nf">berechne_alter</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">aktuelles_jahr</span><span class="p">):</span>
+		<span class="k">return</span> <span class="n">aktuelles_jahr</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">geburtsjahr</span>
+
+	<span class="k">def</span> <span class="nf">steckbrief</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+		<span class="nf">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">+</span> <span class="sh">"</span><span class="s"> arbeitet als </span><span class="sh">"</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">+</span> <span class="sh">"</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">ada</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Ada</span><span class="sh">"</span><span class="p">,</span><span class="mi">1815</span><span class="p">,</span><span class="sh">"</span><span class="s">Programmierin</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">ada</span><span class="p">.</span><span class="nf">steckbrief</span><span class="p">()</span>
+
+<span class="n">adas_alter</span> <span class="o">=</span> <span class="n">ada</span><span class="p">.</span><span class="nf">berechne_alter</span><span class="p">(</span><span class="mi">2025</span><span class="p">)</span>
+</code></pre></div></div> <p>Man kann in Methoden auch Attribute ändern:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">geburtsjahr</span><span class="p">,</span><span class="n">beruf</span><span class="p">):</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">geburtsjahr</span> <span class="o">=</span> <span class="n">geburtsjahr</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">=</span> <span class="n">beruf</span>
+
+	<span class="k">def</span> <span class="nf">berechne_alter</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">aktuelles_jahr</span><span class="p">):</span>
+		<span class="k">return</span> <span class="n">aktuelles_jahr</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">geburtsjahr</span>
+
+	<span class="k">def</span> <span class="nf">steckbrief</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+		<span class="nf">print</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">+</span> <span class="sh">"</span><span class="s"> arbeitet als </span><span class="sh">"</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">+</span> <span class="sh">"</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+
+	<span class="k">def</span> <span class="nf">neuer_beruf</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">neuer_job</span><span class="p">):</span>
+		<span class="n">self</span><span class="p">.</span><span class="n">beruf</span> <span class="o">=</span> <span class="n">neuer_beruf</span>
+
+<span class="n">ada</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Ada</span><span class="sh">"</span><span class="p">,</span><span class="mi">1815</span><span class="p">,</span><span class="sh">"</span><span class="s">Programmierin</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">ada</span><span class="p">.</span><span class="nf">steckbrief</span><span class="p">()</span>
+
+<span class="n">adas_alter</span> <span class="o">=</span> <span class="n">ada</span><span class="p">.</span><span class="nf">berechne_alter</span><span class="p">(</span><span class="mi">2025</span><span class="p">)</span>
+</code></pre></div></div> <p>In Python gibt es eine Reihe von magischen Methoden, so genannten Dunder Methoden (Dunder = Double UNDERscore):</p> <table class="table"> <thead> <tr> <th>Methode</th> <th>Zweck / Wird aufgerufen bei …</th> <th>Beispiel</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">__init__(self, ...)</code></td> <td>Konstruktor: Beim Erstellen eines Objekts</td> <td><code class="language-plaintext highlighter-rouge">obj = Klasse(...)</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__str__(self)</code></td> <td>Wenn <code class="language-plaintext highlighter-rouge">print(obj)</code> oder <code class="language-plaintext highlighter-rouge">str(obj)</code> aufgerufen wird</td> <td><code class="language-plaintext highlighter-rouge">print(obj)</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__repr__(self)</code></td> <td>Offizielle Darstellung (z. B. in der Konsole)</td> <td><code class="language-plaintext highlighter-rouge">repr(obj)</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__eq__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">==</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">obj1 == obj2</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__ne__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">!=</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">obj1 != obj2</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__lt__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">&lt;</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">a &lt; b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__le__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">&lt;=</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">a &lt;= b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__gt__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">&gt;</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">a &gt; b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__ge__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">&gt;=</code> Vergleich</td> <td><code class="language-plaintext highlighter-rouge">a &gt;= b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__add__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">+</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a + b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__sub__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">-</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a - b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__mul__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">*</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a * b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__truediv__(self, o)</code></td> <td> <code class="language-plaintext highlighter-rouge">/</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a / b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__floordiv__(self, o)</code></td> <td> <code class="language-plaintext highlighter-rouge">//</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a // b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__mod__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">%</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a % b</code></td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">__pow__(self, other)</code></td> <td> <code class="language-plaintext highlighter-rouge">**</code> Operator</td> <td><code class="language-plaintext highlighter-rouge">a ** b</code></td> </tr> </tbody> </table> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2025 Jonas Jansen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js"></script> <script defer src="/assets/js/common.js"></script> <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script> </body> </html>
