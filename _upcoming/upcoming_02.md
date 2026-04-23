@@ -5,4 +5,4 @@ link: https://www.equadiff2026.cz/
 inline: true
 ---
 
-Minisymposium "Nonlinear waves in complex systems - fronts, fluids and fluctuations " at EquaDiff 2026, together with Bastian Hilder and Christian Kühn (TU Munich)
+Minisymposium "Nonlinear waves in complex systems - fronts, fluids and fluctuations" at EquaDiff 2026, together with Bastian Hilder and Christian Kühn (TU Munich)
