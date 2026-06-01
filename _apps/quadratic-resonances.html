@@ -128,12 +128,21 @@ function spectralPoints(p,q){
       if(!seen.has(key)){seen.add(key);pts.push(ang);} } }
   return pts;
 }
-function findPQforEta(target,lim=400){
+function etaIsRealisable(E){ if(E<1) return false; let n=E,c3=0;
+  while(n%3===0){n/=3;c3++;} if(c3>1) return false;
+  for(let d=2;d*d<=n;d++){ if(n%d===0){ while(n%d===0)n/=d; if(d%3===2) return false; } }
+  if(n>1 && n%3===2) return false; return true; }
+function findPQforEta(target){
+  if(!etaIsRealisable(target)) return null;        // exact feasibility test: only discard here
+  // realisable => a solution exists; expand the search window until we find the
+  // smallest-theta (p,q). Doubling keeps it fast and is guaranteed to terminate.
   let best=null;
-  for(let q=1;q<lim;q++){ for(let p=1;p<lim;p++){ if(gcd(p,q)!==1) continue;
-    const r=etaOf(p,q); if(r.eta===target){ let th=(thetaOf(p,q)*180/Math.PI)%60; if(th>30)th=60-th;
-      if(best===null||th<best.th-1e-9) best={th,p,q}; } }
-    if(best) break; }
+  for(let lim=2000; best===null && lim<=1e7; lim*=2){
+    for(let q=1;q<lim;q++){ for(let p=1;p<lim;p++){ if(gcd(p,q)!==1) continue;
+      const r=etaOf(p,q); if(r.eta===target){ let th=(thetaOf(p,q)*180/Math.PI)%60; if(th>30)th=60-th;
+        if(best===null||th<best.th-1e-9) best={th,p,q}; } }
+      if(best) break; }
+  }
   return best?{p:best.p,q:best.q}:null;
 }
 function isCanon(off,canon){ return canon.some(c=>Math.abs(off-c)<1e-2||Math.abs(off-c-60)<1e-2||Math.abs(off-c+60)<1e-2); }
@@ -209,7 +218,7 @@ function draw(){
   else { const E=safeEvalEta($("hx-in-eta").value.trim());
     if(E===null||E<1){ info("η must be a positive integer expression (digits and * + - ( ) only).",true); return; }
     const res=findPQforEta(E);
-    if(!res){ info("η = "+E+" is not realisable: need η = 3^c₃·∏ pᶜ with p ≡ 1 (mod 3).",true); plot(null); return; }
+    if(!res){ info("η = "+E+" is not realisable: it has a prime factor p ≡ 2 (mod 3) to an odd power (or 3²∣η); the Eisenstein norm form cannot represent it.",true); plot(null); return; }
     p=res.p; q=res.q; }
   const out=buildSVG(p,q);
   info(out.msg,out.err); plot(out.svg);
